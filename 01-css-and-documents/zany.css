@@ -1,0 +1,10 @@
+body {background: white; font: medium serif;}
+h1 {color: goldenrod;}
+a:link {color: lime; text-decoration: underline;}
+p {margin-left: 5%; margin-right: 10%;}
+p:first-line {font-size: 120%; font-weight: bold;
+   color: teal;}
+p.footnote {font-size: smaller;}
+blockquote {font-style: italic;}
+blockquote em {font-style: normal;}
+pre, code, tt {color: rebeccapurple; font-family: monospace;}
