@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.0"
+  width="425"
+  height="300">
+    <circle r="140" cx="150" cy="150" />
+    <circle r="80"  cx="335" cy="150" />
+</svg>
