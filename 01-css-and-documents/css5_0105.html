@@ -5,23 +5,25 @@
 <title>01-05</title>
 <style type="text/css" media="all">
 section[id] {position: absolute; padding: 0 1em 3.25em;
-	border: 2px solid; -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	border: 2px solid; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	background-color: white;
 	font: 0.9em Courier New, monospace; white-space: pre;}
 
-#doc {top: 7em; left: 2.5em; width: 28em; line-height: 1.4;}
-#css1 {top: 3em; left: 40em; width: 31em;}
-#css2 {top: 22em; left: 40em; width: 25em;}
+#doc {top: 3em; left: 2.5em; width: 28em; line-height: 1.4; z-index: -1;}
+#css1 {top: 4.5em; left: 42em; width: 31em;}
+#css2 {top: 23em; left: 38em; width: 25em;}
 
 section h1 {position: absolute; width: 100%; bottom: 0.15em; left: 0; margin: 0;
 	font: bold 2em "Proxima Sans", Helvetica, sans-serif; text-align: center;}
 
-section img {position: absolute;}
-#css1 img {bottom: -26px; left: -191px;
-	-moz-transform: rotate(-1deg);
-	-moz-transform-origin: 100% 100%;}
-#css2 img {top: -27px; left: -391px;
-	-moz-transform: rotate(1deg);
-	-moz-transform-origin: 100% 0;}
+section img {position: absolute;
+	z-index: -1;}
+#css1 img {top: 50%; margin-top: -50px; left: -40%;
+	transform: rotate(0);
+	transform-origin: 100% 100%;}
+#css2 img {top: 0; margin-top: -13px; left: -94%;
+	transform: rotate(19deg);
+	transform-origin: 100% 0;}
 
 </style>
 </head>
@@ -32,10 +34,9 @@ section img {position: absolute;}
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Eric’s World of Waffles&lt;/title&gt;
-&lt;meta http-equiv="content-type"
-      content="text/html; charset=utf-8"&gt;
-<strong>&lt;link rel="stylesheet" type="text/css"
-      href="sheet1.css" media="all"&gt;</strong>
+&lt;meta charset="utf-8"&gt;
+<strong>&lt;link rel="stylesheet" media="screen,print"
+      href="sheet1.css"&gt;</strong>
 &lt;style type="text/css"&gt;
 /* These are my styles! Yay! */
 <strong>@import url(sheet2.css);</strong>
