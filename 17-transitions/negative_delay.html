@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+@import url(../styles/style-edit.css);
+div {
+  color: #ff0000;
+  border: 1px solid #00ff00;
+  border-radius: 0;
+  opacity: 1;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  padding: 100px;
+}
+</style>
+<style contenteditable id="editme">div {
+  transform: translateX(0);
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-delay: -1.50s;
+  transition-timing-function: linear;
+}
+div:hover {
+  transform: translateX(200px);
+}</style>
+<title>negative transition-delay</title>
+</head>
+
+<body>
+<ul>
+<div></div>
+</body>
+</html>

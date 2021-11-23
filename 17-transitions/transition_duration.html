@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+@import url(../styles/style-edit.css);
+p {margin: 2em auto; width: 80%;}
+ul {
+	list-style-type: none; 
+}
+li {
+	margin: 1em;margin: 10px 100px; 
+}
+input {
+	border: 3px solid;
+	box-shadow: none;
+	outline: none;
+	font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	font-size: 2em;
+	padding: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.3); 
+}</style>
+<style contenteditable id="editme">input:invalid {
+  transition-duration: 2s;
+  background-color: red; 
+}
+input:valid {
+  transition-duration: 0.2s;
+  background-color: green; 
+}</style>
+<title>Transition Duration</title>
+</head>
+<body>
+
+<p>Note: in the inputs below, integers (or their equivalents) are valid, while fractional numbers are not.  You can change the values via keyboard to make them invalid or valid.  When an input’s value becomes invalid, it changes slowly to red. When the value changes from invalid to valid, it changes to green quickly. You can edit the times in the CSS above to change the durations of the transitions.</p>
+
+<ul>
+<li>
+<input type="number" min="0" max="10" value="5">
+</li>
+<li>
+<input type="number" min="0" max="10" value="5.1">
+</li>
+</ul>
+</body>
+</html>
