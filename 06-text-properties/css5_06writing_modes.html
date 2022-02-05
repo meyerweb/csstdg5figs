@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Figure</title>
+<title>Figure 6-??</title>
 <style type="text/css">
 </style>
 <style type="text/css">
-p {border: 1px dotted; float: left; width: 8em; height: 6em; margin: 1em;}
+.arena {display: flex; width: 80em;}
+p {border: 1px dotted; width: 8em; height: 6em; margin: 1em; font-size: 1.5em;}
 .cl1 {writing-mode: horizontal-tb;}
 .cl2 {writing-mode: vertical-rl;}
 .cl3 {writing-mode: vertical-lr;}
+.cl4 {writing-mode: sideways-rl;}
+.cl5 {writing-mode: sideways-lr;}
 div.labels {clear: left; display: flex;}
 div.labels p {width: 8em; text-align: center; height: auto; margin-top: 0; border: 0;}
 div.labels p strong {font: bold 90% Open Sans, sans-serif;}
@@ -31,12 +34,22 @@ This is a paragraph of English text, largely unstyled.
 This is a paragraph of English text, largely unstyled.
 </p>
 
+<p class="cl4">
+This is a paragraph of English text, largely unstyled.
+</p>
+
+<p class="cl5">
+This is a paragraph of English text, largely unstyled.
+</p>
+
 </div>
 
 <div class="labels">
 <p><strong>horizontal-tb</strong></p>
 <p><strong>vertical-rl</strong></p>
 <p><strong>vertical-lr</strong></p>
+<p><strong>sideways-rl</strong></p>
+<p><strong>sideways-lr</strong></p>
 </div>
 
 </body>

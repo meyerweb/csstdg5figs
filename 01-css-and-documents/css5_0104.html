@@ -2,23 +2,33 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>01-04</title>
+<title>01-03</title>
 <style type="text/css" media="all">
-body {width: 42em;}
-</style>
-<link rel="stylesheet" type="text/css" href="sheet1.css" media="all" />
-<style type="text/css">
-@import url(sheet2.css);
-/* These are my styles! Yay! */
+body {width: 25em; padding: 1em;}
+book, maintitle, subtitle, author, isbn {display: block;}
+publisher, pubdate {display: inline;}
+maintitle {font: bold 1.4em/1 sans-serif; border-bottom: 1px solid gray; margin-top: 1.5em;}
+subtitle {font-size: 1.1em; margin: 0.25em 0 0.5em;}
+author {font-weight: bold;}
+pubdate {font-size: 90%;}
+pubdate:before {content: " (";}
+pubdate:after {content: ")";}
+isbn {font-style: italic;}
+isbn[type$="10"]::before {content: "ISBN-10 ";}
+isbn[type$="13"]::before {content: "ISBN-13 ";}
 </style>
 </head>
 <body>
-<h1>Waffles!</h1>
-<p style="color: gray;">The most wonderful of all breakfast foods is
-the waffle—a ridged and cratered slab of home-cooked, fluffy goodness
-that makes every child's heart soar with joy. And they're so easy to make!
-Just a simple waffle-maker and some batter, and you're ready for a morning
-of aromatic ecstasy!
-</p>
+
+<book>
+ <maintitle>The Victorian Internet</maintitle>
+ <subtitle>The Remarkable Story of the Telegraph and the Nineteenth Century's On-Line Pioneers</subtitle>
+ <author>Tom Standage</author>
+ <publisher>Bloomsbury Pub Plc USA</publisher>
+ <pubdate>February 25, 2014</pubdate>
+ <isbn type="isbn-13">9781620405925</isbn>
+ <isbn type="isbn-10">162040592X</isbn>
+</book>
+
 </body>
 </html>

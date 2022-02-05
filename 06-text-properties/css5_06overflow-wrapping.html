@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure 6-44</title>
+<link rel="stylesheet" type="text/css" href="ch06.css">
+<style type="text/css">
+body.l3up {width: 49em; max-height: 10em;}
+div::before {content: "x"; display: block; padding-bottom: 0.5em; margin-left: 1.25em; font: bold 1.25em Consolas, monospace; text-align: left; color: #666;}
+
+.d01 {overflow-wrap: normal;}
+.d02 {overflow-wrap: break-word;}
+.d03 {overflow-wrap: anywhere;}
+
+.d01::before {content: "normal";}
+.d02::before {content: "break-word";}
+.d03::before {content: "anywhere";}
+
+p {border: 1px dotted #C60; margin: 0 1.5em; width: min-content; max-width: 50%;}
+.cl02 {direction: rtl;}
+
+</style>
+</head>
+<body class="l3up">
+
+<div class="d01">
+<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
+</div>
+
+<div class="d02">
+<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
+</div>
+
+<div class="d03">
+<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
+</div>
+
+</body>
+</html>

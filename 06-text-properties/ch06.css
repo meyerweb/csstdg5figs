@@ -1,1 +1,1 @@
-body {padding: 0; margin: 1em;}code, tt, kbd {font: 0.95em "Andale Mono", monospace, serif;}
+html {background: silver;}body {width: 40em; padding: 1em; margin: 0; background: white;}body.l2up {width: 80em; display: flex; justify-content: space-between;}body.l2up > * {width: 45%;}body.l3up {width: 80em; display: flex; justify-content: space-between;}body.l3up > * {width: 30%;}code, tt, kbd {font: 0.95em "Andale Mono", monospace, serif;}
