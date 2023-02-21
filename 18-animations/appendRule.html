@@ -1,10 +1,10 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<title>appendRule, deleteRule, findRule</title>
-<style type="text/css">
+<meta charset="utf-8" />
+<title>Animation appendRule, deleteRule, findRule</title>
+<link href="../styles/style-edit.css" rel="stylesheet" />
+<style>
 #ball {
     height: 100px;
     width: 100px;
@@ -46,12 +46,8 @@
     100% {
         transform: translate(0vw, 90vh);
     }
-}</style>
-</head>
-<body>
-<div id="ball"></div>
-<input type="button" id="button" value="Change the Path">
-<input type="button" value="Reattach Animation" id="reattach"/>
+}
+</style>
 <script>
 var pathChanger = {
   anim : document.styleSheets[0].cssRules[1],
@@ -132,5 +128,10 @@ var pathChanger = {
 }
 
 pathChanger.init();</script>
+</head>
+<body>
+<div id="ball"></div>
+<input type="button" id="button" value="Change the Path" />
+<input type="button" value="Reattach Animation" id="reattach" />
 </body>
 </html>
