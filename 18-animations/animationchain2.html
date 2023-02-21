@@ -46,25 +46,25 @@ li:nth-of-type(5) {animation-duration: 5s;}
 </body>
 <script>
 document.querySelectorAll('li')[0].addEventListener( 'animationend',
-      function(e) {
+      () => {
           document.querySelectorAll('li')[1].style.animationName = 'orange';
       },
       false );
 
 document.querySelectorAll('li')[1].addEventListener( 'animationend',
-      function(e) {
+      () =>  {
           document.querySelectorAll('li')[2].style.animationName = 'yellow';
       },
       false );
 
 document.querySelectorAll('li')[2].addEventListener( 'animationend',
-      function(e) {
+      () => {
           document.querySelectorAll('li')[3].style.animationName = 'green';
       },
       false );
 
 document.querySelectorAll('li')[3].addEventListener( 'animationend',
-      function(e) {
+      () =>  {
           document.querySelectorAll('li')[4].style.animationName = 'blue';
       },
       false );
