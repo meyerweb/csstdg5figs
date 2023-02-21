@@ -1,19 +1,10 @@
-
 <!DOCTYPE HTML>
-<html>
+<html lang="en-US>
 <head>
 <meta charset="utf-8">
-<title></title>
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
-style#editme {
-    -webkit-columns: 2;
-    columns: 2;
-}
-style#editme::before {
-	border-right: 2px solid rgba(0,0,0,0.33);
-	margin-right: 1em;
-}
+<title>Pencil animating a W</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
 .pencil {
     color: blue;
     height: 140px;
@@ -30,27 +21,10 @@ style#editme::before {
     transform-origin: 100px 123px;
 }
 .pencil {
-    -webkit-animation: W 3s infinite linear;
     animation: W 3s infinite linear;
 }
 </style>
-<style contenteditable id="editme">@-webkit-keyframes W {
-    from {
-        left: 0;
-        top: 0;
-    }
-    25%,
-    75% {
-        top: 100%;
-    }
-    50% {
-        top: 50%;
-    }
-    to {
-        left: 100%;
-        top: 0;
-    }
-}
+<style contenteditable id="editme">
 @keyframes W {
     from {
         left: 0;
