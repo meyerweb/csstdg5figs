@@ -1,40 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title></title>
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
-div {padding:2ch;
-	border:5px black solid;
-	color:red;
-	text-align:center;
-	font-family:sans-serif;
-	font-size:2rem;
-	}
-
-@-webkit-keyframes paused {
-	from,to{color:black;background-color:#ccc;}
-	}
-@keyframes paused {
-	from,to{color:black;background-color:#ccc;}
-	}
-
-@-webkit-keyframes running {
-	from,to{color:white;background-color:#333;}
-	}
-@keyframes running {
-	from,to{color:white;background-color:#333;}
-	}
-
-@-webkit-keyframes \32 s {
-  from, 30%{
-    background-color: #f00;
-  }
-  to {
-    background-color: #f33;
-  }
+<title>Bad animation names</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
+div {
+ padding:2ch;
+ border:5px black solid;
+ color:red;
+ text-align:center;
+ font-family:sans-serif;
+ font-size:2rem;
 }
+</style>
+<style contenteditable id="editme">div {
+  animation: 15s paused running;
+}
+
+@keyframes paused {
+  from,to{color:black;background-color:#ccc;}
+}
+
+@keyframes running {
+  from,to{color:white;background-color:#333;}
+}
+
+/* other bad animation names */
 @keyframes \32 s {
   from, 30%{
     background-color: #f00;
@@ -44,14 +36,6 @@ div {padding:2ch;
   }
 }
 
-@-webkit-keyframes \34 s {
-  from, 30%{
-    background-color: #030;
-  }
-  to {
-    background-color: #393;
-  }
-}
 @keyframes \34 s {
   from, 30%{
     background-color: #030;
@@ -61,14 +45,6 @@ div {padding:2ch;
   }
 }
 
-@-webkit-keyframes \36 s {
-  from, 30%{
-    background-color: #0000ff;
-  }
-  to {
-    background-color: #3333ff;
-  }
-}
 @keyframes \36 s {
   from, 30%{
     background-color: #0000ff;
@@ -79,15 +55,9 @@ div {padding:2ch;
 }
 </style>
 
-<style contenteditable id="editme">div {
-  -webkit-animation: 15s running running;
-  animation: 15s paused running;
-}
-</style>
 </head>
 
 <body>
 <div id="blue"><p>Black Text = "Paused"<br>White Text = "Running"</div>
 </body>
 </html>
-
