@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<title></title>
-<meta charset="utf-8">
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
+<meta charset="utf-8"/>
+<title>Negative value for animation-delay</title>
+<link href="../styles/style-edit.css" rel="stylesheet"/>
+<style>
 div {
 	border: 5px black solid;
 	color: white;
@@ -19,7 +19,27 @@ article {
 	background: linear-gradient(to right, black 10%, white 10%);
 	background-size: 50px 10px;
 	margin: 20px 0;
-	position: relative; //border-left: rgba(0,0,0,0.3) 5px solid;}article:after{content:'';height:10px;width:5px;position:absolute;left:400px;background-color:red;}article:after,article:before{height:300px!important;opacity:0.25;content:"";}article:before{position:absolute;left:1000px;width:5px;background-color:black;}
+	position: relative; 
+}
+article::after {
+	content:'';
+	height:10px;
+	width:5px;
+	position:absolute;
+	left:400px;
+	background-color:red;
+}
+article::after,
+article::before {
+	height:300px!important;
+	opacity:0.25;content:"";
+}
+article::before {
+	position:absolute;
+	left:1000px;
+	width:5px;
+	background-color:black;
+}
 </style>
 <style contenteditable id="editme">div {	animation-name: move;
 	animation-duration: 10s;
@@ -30,7 +50,8 @@ article {
 	from {transform: translateX(0);}
 	to {transform: translateX(1000px);}
 }
-</style></head>
+</style>
+</head>
 <body>
 <article></article>
 <div></div>
