@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US" class="code">
+<head>
+<meta charset="utf-8"/>
+<title>Flexbox: overflow with justify-content</title>  
+<link rel="stylesheet" href="c/examples.css"/>
+<style>
+main {
+  display: flex; padding-top: 20px;
+  flex-direction: column;
+  gap: 50px;
+}
+
+div {
+  background-color: rgb(0 0 0 / 0.2)
+}
+article {
+  flex: 1 0 15%; padding-top: 0;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  gap: 20px;
+}
+article > div {
+  border: 2px dashed;
+  padding: 3px;
+  margin-top: 1em;
+}
+div > div {
+  flex: 0 0 50px;
+  border: 1px solid;
+  width: 2em;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div > div:first-of-type {
+  color: red;
+}
+p {
+  margin-top: 1rem; text-align: center;
+}
+</style>
+</head>
+<body>
+<style id="editme" contenteditable style="display: block;">article > div {
+  display: inline-flex;
+  flex-direction: row; /* try row-reverse */
+}
+article > div:last-of-type {
+  flex-wrap: wrap;
+}
+article:nth-of-type(1) > div { justify-content: normal;}
+article:nth-of-type(2) > div { justify-content: flex-start;}
+article:nth-of-type(3) > div { justify-content: center;}
+article:nth-of-type(4) > div { justify-content: flex-end;}
+article:nth-of-type(5) > div { justify-content: space-between;}
+article:nth-of-type(6) > div { justify-content: space-around;}
+article:nth-of-type(7) > div { justify-content: space-evenly;}
+</style>
+<main>
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <p>
+<code>normal</code><br/>(or <code>stretch</code>, which has not effect)</p>
+</article>
+
+
+
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <p><code>flex-start<br/>start</code></p>
+</article>
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+<p><code>center</code></p>
+</article>
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <p><code>flex-end<br/>end</code></p>
+</article>
+
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+<p><code>space-between</code></p>
+</article>
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+<p><code>space-around</code></p>
+</article>
+
+<article>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+  <br/>
+  <div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+  </div>
+<p><code>space-evenly</code></p>
+</article>
+</main>
+</body>
+</html>
