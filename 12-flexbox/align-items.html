@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: align-items</title>  
+   <link rel="stylesheet" href="c/examples.css"/>
+  <style>
+body {
+  padding: 100px;
+  font-size: 25px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+div {
+  background-color: rgba(0 0 0 / 0.1);
+}
+article {
+
+}
+article > div {
+  display: inline-flex;
+  flex-flow: row wrap;
+  border: 1px dashed;
+  gap: 0.5em;
+} 
+section + section { display:flex; gap: 3em;flex-wrap:wrap; }
+section + section article > div {
+flex-direction: column;
+}
+article > div > div {
+  border: 1px solid;
+  
+} 
+div > div {
+  border: 1px solid;
+}
+p {
+  margin-top: 0;
+  font-family: monospace;
+}
+
+.a {font-size: 2.4rem;}
+.b {font-size: 2.1rem;}
+.c {font-size: 1.8rem;}
+.d {font-size: 1.4rem;}
+.e {font-size: 1rem;}
+</style>
+</head>
+<body>
+<section>
+<article>
+<div style="align-items: stretch;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+  
+</div>
+<p>normal<br/>stretch</p>
+</article>
+<article>
+<div style="align-items: flex-start">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div> 
+</div>
+<p>flex-start<br/>start<br/>self-start</p>
+</article>
+
+<article>
+<div style="align-items: flex-end">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>flex-end<br/>end<br/>self-end</p>
+</article>
+
+<article>
+<div style="align-items: center">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>center</p>
+</article>
+
+<article>
+<div style="align-items: baseline;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>baseline<br/>first baseline</p>
+</article>
+
+<article>
+<div style="align-items: last baseline;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>last baseline</p>
+</article>
+</section>
+<section>
+<article>
+<div style="align-items: stretch;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+  
+</div>
+<p>normal<br/>stretch</p>
+</article>
+<article>
+<div style="align-items: flex-start">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div> 
+</div>
+<p>flex-start<br/>start<br/>self-start</p>
+</article>
+
+<article>
+<div style="align-items: flex-end">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>flex-end<br/>end<br/>self-end</p>
+</article>
+
+<article>
+<div style="align-items: center">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>center</p>
+</article>
+
+<article>
+<div style="align-items: baseline;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>baseline<br/>first baseline</p>
+</article>
+
+<article>
+<div style="align-items: last baseline;">
+  <div class="a">One</div>
+  <div class="b">Two<br/>Two</div>
+  <div class="c">Three<br/>Three<br/>Three</div>
+  <div class="d">Four<br/>Four<br/>Four<br/>Four</div>
+  <div class="e">Five<br/>Five<br/>Five<br/>Five<br/>Five</div>
+</div>
+<p>last baseline</p>
+</article>
+</section>
+</body>
+</html>
