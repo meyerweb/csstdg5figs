@@ -1,8 +1,8 @@
-<!doctype html>
-<html class="code">
+<!DOCTYPE html>
+<html lang="en-US" class="code">
 <head>
 <meta charset="utf-8"/>
-<title>Justify-content</title>  
+<title>Flexbox: justify-content</title>  
 <link rel="stylesheet" href="c/examples.css">
 <style>
 body {
@@ -10,7 +10,7 @@ body {
   text-align: center;
 }
 div {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0 0 0 / 0.1);
   font-family: monospace;
 }
 article > div {
@@ -27,77 +27,73 @@ div > div {
 }
 p {
   margin-top: 0;
+  font-family: monospace;
 }
 </style>
 </head>
 <body>
+
+<article>
+  <div style="justify-content: normal;">
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
+  </div>
+  <p>normal<br/>stretch (no effect)</p>
+</article>
+
 <article>
   <div style="justify-content: flex-start;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
   </div>
-  <p>justify-content: flex-start; ⤴</p>
+  <p>start<br/>flex-start</p>
 </article>
-
-
-
-
-<article>
-  <div style="justify-content: flex-end;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
-  </div>
-  <p>justify-content: flex-end;⤴</p>
-</article>
-
-
-
 
 <article>
   <div style="justify-content: center;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
   </div>
-  <p>justify-content: center;⤴</p>
+  <p>center</p>
 </article>
 
-
-
+<article>
+  <div style="justify-content: flex-end;">
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
+  </div>
+  <p>end<br/>flex-end</p>
+</article>
 
 <article>
   <div style="justify-content: space-between;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
   </div>
-  <p>justify-content: space-between;⤴</p>
+  <p>space-between</p>
 </article>
-
-
-
 
 <article>
   <div style="justify-content: space-around;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
   </div>
-  <p>justify-content: space-around;⤴</p>
+  <p>space-around</p>
 </article>
-
-
-
 
 <article>
   <div style="justify-content: space-evenly;">
-    <div>A</div>
-    <div>BBB</div>
-    <div>CCCCCC</div>
+    <div>One</div>
+    <div>Two Two</div>
+    <div>Three Three Three</div>
   </div>
-  <p>justify-content: space-evenly;⤴</p>
+  <p>space-evenly</p>
 </article>
 
 </body>
