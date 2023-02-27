@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Block and inline grid elements</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {display: flex; justify-content: space-between; font-size: 1.25em; max-width: 110ch;}
+section {position: relative; width: 45%;}
+
+.grid {display: grid; width: 200px; height: 100px;
+	grid-template-rows: repeat(3,1fr); grid-template-columns: repeat(5,1fr);}
+.grid.inline {display: inline-grid; width: 100px; height: 70px;}
+</style>
+</head>
+<body>
+
+<section>
+
+<div>
+This grid box is placed in the middle
+<div class="grid boxed lines">
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+</div>
+of a sentence.  It generates a block box, so it breaks up the content flow.
+</div>
+</section>
+<section>
+<div>
+This grid box is also placed in the middle
+<div class="grid boxed lines inline">
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+</div>
+of a sentence.  It generates an inline box, so it’s treated like an inline block box (similar to an image, though there are differences).
+</div>
+</section>
+
+</body>
+</html>

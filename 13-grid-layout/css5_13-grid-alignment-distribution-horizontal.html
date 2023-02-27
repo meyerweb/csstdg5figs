@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {
+	display: grid; 
+	grid-template-columns: 3fr 4fr;
+	grid-template-rows: repeat(4,min-content);
+ 	gap: 1.5em 5vw;
+	grid-auto-flow: column;
+	font-size: 1.5vw;
+}
+
+.grid article {display: grid; padding: 0.5em; width: auto;
+	gap: 0.75rem 0.25rem; border: 1px solid;
+	grid-template-rows: 2em; grid-template-columns: repeat(5, 3.33em);
+	background: #0001;
+	counter-reset: box;}
+div article span {counter-increment: box;}
+div article span::before {content: counter(box); opacity: 0.5; font-size: smaller;}
+
+h1 {grid-row: span 1 / 1; grid-column: 1 / 6;
+ 	padding: 0.5em 0 0.125em; margin: 0;
+	text-align: center; font: 1em Helvetica, sans-serif;}
+h1 code {font: 1em Consolas, monospace, serif;}
+
+
+div:nth-of-type(1) article {justify-content: start;}
+div:nth-of-type(2) article {justify-content: end;}
+div:nth-of-type(3) article {justify-content: left;}
+div:nth-of-type(4) article {justify-content: right;}
+div:nth-of-type(5) article {justify-content: space-between;}
+div:nth-of-type(6) article {justify-content: space-around;}
+div:nth-of-type(7) article {justify-content: space-evenly;}
+div:nth-of-type(8) article {justify-content: stretch;}
+
+.grid span[class^="box"] {box-sizing: border-box; color: inherit;}
+span[class*="01"] {grid-row: 1; grid-column: 1;}
+span[class*="02"] {grid-row: 1; grid-column: 2;}
+span[class*="03"] {grid-row: 1; grid-column: 3;}
+span[class*="04"] {grid-row: 1; grid-column: 4;}
+span[class*="05"] {grid-row: 1; grid-column: 5;}
+
+</style>
+</head>
+<body>
+
+<div class="grid small">
+<h1><code>justify-content: start</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: end</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: left</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: right</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: space-between</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: space-around</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-content: space-evenly</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+</article>
+</div>
+
+</body>
+</html>

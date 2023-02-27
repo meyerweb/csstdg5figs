@@ -6,12 +6,16 @@
 <style type="text/css">
 body {display: flex; justify-content: center;}
 ul {display: grid;
-	grid-template-columns: repeat(4,225px);
-	grid-template-rows: 160px 1fr;
-	grid-gap: 5em 0;
-	list-style: none;}
-li {position: relative;}
-li img {display: block; margin: 0 auto; height: 150px; width: 150px;}
+	grid-template-columns: repeat(4,250px);
+	grid-template-rows: 250px 1fr;
+	grid-gap: 1em;
+	list-style: none;
+	padding: 1em 1em 3em;
+	margin: 0;}
+li {position: relative; height: 225px; width: 225px; border: 1px dotted;}
+li img {position: absolute; margin: 0 auto;}
+li img[src*="circle"] {top: 0; left: 0; height: 150px; width: 150px;}
+li img[src*="square"] {bottom: 18px; right: 18px; height: 132px; width: 132px;}
 li span {display: block; position: relative; height: 225px; width: 225px; background: teal;
 	mask:
 	url(i/circle.svg) top left / 150px 150px no-repeat,

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+@import url(c/subgrid-baseline.css);
+body > *:not(#null) {padding-inline: 0;}
+header.site > * {background: hsla(0deg,50%,50%,0.25);}
+</style>
+<style type="text/css">
+body {display: grid; grid-template-columns: repeat(16,1fr); grid-template-rows: repeat(3,min-content);}
+:is(header, footer).site {grid-column: 1 / -1;}
+main {grid-column: 2 / -2;}
+
+header.site {display: grid; grid-template-columns: subgrid;}
+header.site h1 {grid-column: 2 / span 5;}
+header.site nav {grid-column: span 7 / -2; align-self: center; text-align: end;}
+</style>
+</head>
+<body>
+	<header class="site">
+		<h1>ConHugeCo</h1>
+		<nav>
+			<a href="…">Home</a>
+			<a href="…">Mission</a>
+			<a href="…">Products</a>
+			<a href="…">Services</a>
+			<a href="…">Support</a>
+			<a href="…">Contact</a>
+		</nav>
+	</header>
+	<main>
+		 <p>…</p>
+	</main>
+	<footer class="site">
+		<img src="i/conhugeco.png" class="logo">
+		<nav>
+			<a href="…">Home</a>
+			<a href="…">Mission</a>
+			<a href="…">Products</a>
+			<a href="…">Services</a>
+			<a href="…">Support</a>
+			<a href="…">Contact</a>
+		</nav>
+		<div class="sosumi">Copyleft 2112 ConHugeCo Inc. All lefts reserved.</div>
+	</footer>
+
+<ul class="lines">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+</body>
+</html>

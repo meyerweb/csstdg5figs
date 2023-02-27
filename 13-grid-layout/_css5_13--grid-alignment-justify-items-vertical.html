@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {
+	display: grid;
+	grid-template-columns: repeat(5, max-content);
+	gap: 0 4em;
+}
+.grid {
+	display: flex;
+	height: 25em;
+}
+.grid article {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr); grid-template-columns: 2em 2em;
+	gap: 0.25em;
+	height: 25em;
+	padding: 0.25em;
+	border: 1px solid;
+	background: #0001;
+	}
+.grid span[class*="box"]::before {content: counter(box); opacity: 0.5; font-size: smaller;}
+
+h1 {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	margin: 0;
+ 	padding-block: 0.25em;
+	font: 1.33em Helvetica, sans-serif;
+	text-align: center;
+	white-space: nowrap;
+	}
+h1 code {font: 1.1em monospace, serif;}
+
+.grid.small span[class*="box"] {
+	box-sizing: border-box;
+	height: min-content;
+	padding: 1em 0.25em;
+	border: 2px solid black;
+	color: inherit;
+	background: hsla(117,50%,50%,0.25);
+	counter-increment: box;
+}
+
+.grid:nth-of-type(1) article {align-items: start;}
+.grid:nth-of-type(2) article {align-items: end;}
+.grid:nth-of-type(3) article {align-items: left;}
+.grid:nth-of-type(4) article {align-items: right;}
+.grid:nth-of-type(5) article {align-items: center;}
+.grid:nth-of-type(6) article {align-items: stretch;}
+
+.grid span[class*="01"] {grid-row: 1; grid-column: 1;}
+.grid span[class*="02"] {grid-row: 2; grid-column: 1;}
+.grid span[class*="03"] {grid-row: 3; grid-column: 1;}
+.grid span[class*="04"] {grid-row: 1; grid-column: 2;}
+.grid span[class*="05"] {grid-row: 2; grid-column: 2;}
+.grid span[class*="06"] {grid-row: 3; grid-column: 2;}
+
+.grid span[class*="gridline"] {align-self: stretch;}
+
+</style>
+</head>
+<body>
+
+<div class="grid small">
+<h1><code>align-content: start</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>align-content: end</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>align-content: left</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>align-content: right</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>align-content: center</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+</article>
+</div>
+
+
+</body>
+</html>

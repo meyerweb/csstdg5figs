@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {width: auto;}
+.grid > * {box-sizing: border-box;}
+
+#grid {
+  display: grid;
+  grid: repeat(3,8rem) / repeat(5, 8rem);
+  width: 40rem;
+  position: relative;
+  /* Establish abspos containing block */
+}
+
+.exel {
+  grid-row: 2 / 4; grid-column: 2 / 5;
+  background: #F002;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.exel i {
+	position: absolute;
+	top: 1em; bottom: 15%;
+	left: 35px; right: 1rem;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid boxed lines" id="grid">
+<span class="exel"><i class="box01">exel</i></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+<span class="gridlines"></span>
+</div>
+
+</body>
+</html>

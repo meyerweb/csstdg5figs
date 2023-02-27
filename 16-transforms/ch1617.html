@@ -3,30 +3,28 @@
 <head>
 <title>Figure 16</title>
 <style type="text/css">
-body {margin: 100px;}
+body {display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 75px; max-width: min-content; padding: 75px;}
 
-	div {border: 1px solid red; float: left; position: relative; margin: 50px;
-		background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
-		transform-style: preserve-3d; perspective: 500px; transition: 5s;}
-	div:nth-child(5) {clear: left;}
-	img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
-	span {position: absolute; top: 125%; left: -25%; width: 150%;
-		text-align: center; white-space: pre; font: 17px Anadale Mono, monospace;}
+div {border: 1px solid red; float: left; position: relative;
+	background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
+	transform-style: preserve-3d; perspective: 500px; transition: 5s;}
+img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
+figure {margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;}
+figcaption {margin-block: 20px 0; white-space: pre; font: 25px Consolas, monospace; position: relative; z-index: 5;}
 
-	#ex01 {transform: skew(45deg,20deg);}
-	#ex02 {transform: skew(45deg,-20deg);}
-	#ex03 {transform: skew(-45deg,20deg);}
-	#ex04 {transform: skew(-45deg,-20deg);}
-
+#ex01 {transform: skew(45deg,20deg);}
+#ex02 {transform: skew(45deg,-20deg);}
+#ex03 {transform: skew(-45deg,20deg);}
+#ex04 {transform: skew(-45deg,-20deg);}
 
 </style>
 </head>
 <body>
 
-<div><img src="img/box-axes.png" alt="" id="ex01"><span>skew(45deg,20deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex02"><span>skew(45deg,-20deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex03"><span>skew(-45deg,20deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex04"><span>skew(-45deg,-20deg)</span></div>
+<figure><div><img src="img/box-axes.png" alt="" id="ex01"></div><figcaption>skew(45deg,20deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex02"></div><figcaption>skew(45deg,-20deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex03"></div><figcaption>skew(-45deg,20deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex04"></div><figcaption>skew(-45deg,-20deg)</figcaption></figure>
 
 </body>
 </html>

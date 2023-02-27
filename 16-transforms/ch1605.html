@@ -3,29 +3,32 @@
 <head>
 <title>Figure 5</title>
 <style type="text/css">
-body {margin: 100px;}
+body {display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px 75px; max-width: min-content; padding-block: 35px; padding-inline: 10px 35px;}
 
-	div {border: 1px solid red; float: left; position: relative; margin: 50px;
-		background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
-		transform-style: preserve-3d; perspective: 400px;}
-	div:nth-child(5) {clear: left;}
-	img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
-	span {position: absolute; top: 125%; left: 0; width: 100%;
-		text-align: center; white-space: pre; font: 17px Anadale Mono, monospace;}
+div {height: 150px; width: 150px; border: 1px solid red; position: relative;
+	background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
+	perspective: 400px;}
 
-	#ex01 {transform: rotate(45deg);}
-	#ex02 {transform: rotate(-45deg);}
-	#ex03 {transform: rotate(-100deg);}
-	#ex04 {transform: rotate(175deg);}
+img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
+span {position: absolute; top: 125%; left: 0; width: 100%;
+	text-align: center; white-space: pre; font: 17px Anadale Mono, monospace;}
+
+figure {margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;}
+figcaption {margin-block: 35px 0; white-space: pre; font: 20px Consolas, monospace;}
+
+#ex01 {transform: rotate(45deg);}
+#ex02 {transform: rotate(-45deg);}
+#ex03 {transform: rotate(-100deg);}
+#ex04 {transform: rotate(175deg);}
 
 </style>
 </head>
 <body>
 
-<div><img src="img/box-axes.png" alt="" id="ex01"><span>rotate(45deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex02"><span>rotate(-45deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex03"><span>rotate(-100deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex04"><span>rotate(175deg)</span></div>
+<figure><div><img src="img/box-axes.png" alt="" id="ex01"></div><figcaption>rotateX(45deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex02"></div><figcaption>rotateX(-45deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex03"></div><figcaption>rotate(-100deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex04"></div><figcaption>rotate(175deg)</figcaption></figure>
 
 </body>
 </html>

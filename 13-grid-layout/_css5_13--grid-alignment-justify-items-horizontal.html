@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {
+	display: grid;
+	grid-template-columns: repeat(2,1fr); gap: 2vw 5vw;
+	width: auto;
+	max-width: max-content;
+	}
+.grid article {
+	display: grid;
+	grid-template-rows: 2em 2em; grid-template-columns: repeat(4, 6em);
+	gap: 0.25em;
+	width: 100%;
+	padding: 0.25em;
+	border: 1px solid;
+	background: #0001;
+	}
+
+.grid span[class*="box"]::before {content: counter(box); opacity: 0.5; font-size: smaller;}
+
+h1 {grid-row: span 1 / 1; grid-column: 1 / 5;
+ 	padding: 0.5em 0 0.25em;
+	text-align: center; font: 1em Helvetica, sans-serif; margin: 0;}
+h1 code {font: 1.5em Consolas, monospace, serif;}
+
+.grid.small span[class*="box"] {
+	box-sizing: border-box;
+	width: min-content;
+	padding: 0.25em 1em;
+	border: 2px solid black;
+	color: inherit;
+	background: hsla(117,50%,50%,0.25);
+	counter-increment: box;
+}
+.grid:nth-of-type(5) {grid-column: span 2; justify-self: center;}
+
+.grid:nth-of-type(1) article {justify-items: start;}
+.grid:nth-of-type(2) article {justify-items: end;}
+.grid:nth-of-type(3) article {justify-items: left;}
+.grid:nth-of-type(4) article {justify-items: right;}
+.grid:nth-of-type(5) article {justify-items: center;}
+.grid:nth-of-type(6) article {justify-items: stretch;}
+
+span[class*="01"] {grid-row: 1; grid-column: 1;}
+span[class*="02"] {grid-row: 1; grid-column: 2;}
+span[class*="03"] {grid-row: 1; grid-column: 3;}
+span[class*="04"] {grid-row: 1; grid-column: 4;}
+span[class*="05"] {grid-row: 2; grid-column: 1;}
+span[class*="06"] {grid-row: 2; grid-column: 2;}
+span[class*="07"] {grid-row: 2; grid-column: 3;}
+span[class*="08"] {grid-row: 2; grid-column: 4;}
+
+span[class*="gridline"] {justify-self: stretch;}
+
+</style>
+</head>
+<body>
+
+<div class="grid small">
+<h1><code>justify-items: start</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="box07"></span>
+<span class="box08"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+<span class="gridlines07"></span>
+<span class="gridlines08"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-items: end</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="box07"></span>
+<span class="box08"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+<span class="gridlines07"></span>
+<span class="gridlines08"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-items: left</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="box07"></span>
+<span class="box08"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+<span class="gridlines07"></span>
+<span class="gridlines08"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-items: right</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="box07"></span>
+<span class="box08"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+<span class="gridlines07"></span>
+<span class="gridlines08"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>justify-items: center</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+<span class="box05"></span>
+<span class="box06"></span>
+<span class="box07"></span>
+<span class="box08"></span>
+<span class="gridlines01"></span>
+<span class="gridlines02"></span>
+<span class="gridlines03"></span>
+<span class="gridlines04"></span>
+<span class="gridlines05"></span>
+<span class="gridlines06"></span>
+<span class="gridlines07"></span>
+<span class="gridlines08"></span>
+</article>
+</div>
+
+
+
+</body>
+</html>

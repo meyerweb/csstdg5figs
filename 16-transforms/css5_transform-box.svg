@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 200" width="500" height="200"
+     fill="none" stroke="#000" stroke-width="1">
+  <defs>
+    <style>
+      g rect {transform-origin: 0 0; transform: rotate(20deg);}
+      g rect:nth-child(1) {transform-box: view-box;}
+      g rect:nth-child(2) {transform-box: fill-box;}
+    </style>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" stroke-dasharray="4 3" />
+  <rect x="100" y="50" width="100" height="100" />
+  <rect x="300" y="50" width="100" height="100" />
+  <g stroke-width="3" fill="#FFF8">
+    <rect x="100" y="50" width="100" height="100" />
+    <rect x="300" y="50" width="100" height="100" />
+  </g>
+</svg>

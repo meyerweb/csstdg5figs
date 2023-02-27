@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+@import url(c/subgrid-baseline.css);
+body > *:not(#null) {padding-inline: 0;}
+header.site > * {background: hsla(0deg,50%,50%,0.25);}
+footer.site > * {background: hsla(240deg,50%,50%,0.25);}
+main > * {background: hsla(120deg,50%,50%,0.25);}
+
+header.site {display: grid; grid-template-columns: subgrid;}
+header.site h1 {grid-column: 2 / span 5;}
+header.site nav {grid-column: span 7 / -2; align-self: center; text-align: end;}
+
+footer.site > .rowline {grid-column: 1 / -1; grid-row: 2;
+	background: transparent; border-top: 1px dashed #000A;}
+footer.site {display: grid; grid-template-columns: subgrid; grid-template-rows: repeat(2,auto);}
+footer.site img {grid-column: 5; grid-row: 1 / -1;}
+footer.site nav {grid-column: 9 / -2; }
+footer.site div {grid-column: span 7 / -2;}
+</style>
+<style type="text/css">
+body {display: grid; grid-template-columns: repeat(16,1fr); grid-template-rows: repeat(3,min-content);}
+:is(header, footer).site {grid-column: 1 / -1;}
+
+main {display: grid; grid-template-columns: subgrid; grid-column: 2 / -2; grid-gap: 0;}
+.gallery {display: grid; grid-template-columns: subgrid;
+	grid-template-rows: repeat(2, [pic] max-content [title] max-content [desc] auto);
+ grid-column: 2 / -2;}
+.gallery > div {grid-column: span 2; grid-row: 1 / span 3; display: grid; grid-template-rows: subgrid; padding: 0.5em; border: 1px solid; background: #FFF8;}
+.gallery > div:nth-child(n + 7) {grid-row-start: 4;}
+.gallery > div img {grid-row: pic; width: 100%; max-width: none;}
+.gallery > div h2 {grid-row: title; align-self: center; margin-block: 0.25em 0;}
+.gallery > div p {grid-row: desc; margin-block: 0.25em 0;}
+main p.leadin {grid-column: span 7; text-align: justify;}
+</style>
+</head>
+<body>
+	<header class="site">
+		<h1>ConHugeCo</h1>
+		<nav>
+			<a href="…">Home</a>
+			<a href="…">Mission</a>
+			<a href="…">Products</a>
+			<a href="…">Services</a>
+			<a href="…">Support</a>
+			<a href="…">Contact</a>
+		</nav>
+	</header>
+	<main>
+		<div class="gallery">
+			<div><img src="i/x-box.png" alt=""><h2>Lorem</h2><p>Ipsum eu. Jesse owens warrensville heights tempor dolor.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Ipsum</h2><p> Bowling processus woodmere sed. Sammy kaye putamus jim lovell highland heights.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Dolor</h2><p>Videntur hal holbrook george steinbrenner drew carey.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Sit</h2><p>Est fred willard ozzie newsome humanitatis.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Amet</h2><p>Uss cod ex independence lakewood iusto municipal stadium.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Consectetur adipiscing</h2><p>Euismod collision bend. Nunc consectetuer. Dolore litterarum.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Amet</h2><p>Uss cod ex independence lakewood iusto municipal stadium.</p></div>
+			<div><img src="i/x-box.png" alt=""><h2>Sit</h2><p>Est fred willard ozzie newsome humanitatis.</p></div>
+		</div>
+	</main>
+	<footer class="site">
+		<img src="i/conhugeco.png" class="logo">
+		<nav>
+			<a href="…">Home</a>
+			<a href="…">Mission</a>
+			<a href="…">Products</a>
+			<a href="…">Services</a>
+			<a href="…">Support</a>
+			<a href="…">Contact</a>
+		</nav>
+		<div class="sosumi">Copyleft 2112 ConHugeCo Inc. All lefts reserved.</div>
+	</footer>
+
+<ul class="lines">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li
+<ul>
+
+</body>
+</html>

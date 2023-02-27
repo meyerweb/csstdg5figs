@@ -6,19 +6,26 @@
 <title>Padding, Borders, Outlines, and Margins</title>
 <link rel="stylesheet" type="text/css" href="c/pbom-baseline.css">
 <style type="text/css">
-body {width: 40em;}
-p#imageborder {
-	border: 25px solid;
-	border-image-source: url(i/circles.png);
-	border-image-width: 1em;
+body {width: 40em; display: flex; gap: 2em;}
+p {
+	border: 2px solid;
+	border-image-width: 12px;
 	border-image-slice: 33.3333%;
+	padding: 12px;
+}
+#imageborder {
+	border-image-source: url(i/stars.png);
 }
 </style>
 </head>
 <body>
 
 <p id="imageborder">
-Enim option nonummy at typi habent cavaliers independence andre norton the gold coast. Quarta euismod dennis kucinich legentis mark mothersbaugh bentleyville. Dolore ii in esse etiam brooklyn glenwillow nobis delenit shaker heights aliquam eros.
+<strong>(Border image loads)</strong> Enim option nonummy at typi habent cavaliers independence andre norton the gold coast. Quarta euismod dennis kucinich legentis mark mothersbaugh.
+</p>
+
+<p>
+<strong>(Border image does not load)</strong> Enim option nonummy at typi habent cavaliers independence andre norton the gold coast. Quarta euismod dennis kucinich legentis mark mothersbaugh.
 </p>
 
 </body>

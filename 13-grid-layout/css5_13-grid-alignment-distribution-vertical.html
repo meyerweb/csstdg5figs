@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Grid Layout</title>
+<link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
+<style type="text/css">
+body {display: flex;
+	gap: 0 4em;
+	font-size: 1.5vw;
+}
+.grid {display: flex; align-items: center;}
+h1 {
+ 	padding-block: 0.25em 0; margin: 0;
+	text-align: center; white-space: nowrap;
+	writing-mode: vertical-lr;
+	transform: rotate(-180deg);
+	font: 1em Helvetica, sans-serif;}
+h1 code {font: 1.33em Consolas, monospace, serif;}
+
+
+.grid article {display: grid; padding: 0.5em;
+	width: min-content; height: 25em;
+	grid-gap: 0.25em 0.75em; border: 1px solid;
+	grid-template-rows: repeat(4, 3em); grid-template-columns: 6em;
+	background: #0001;
+	counter-reset: box;}
+div article span {counter-increment: box;}
+div article span::before {content: counter(box); opacity: 0.5; font-size: smaller;}
+
+div:nth-of-type(1) article {align-content: start;}
+div:nth-of-type(2) article {align-content: end;}
+div:nth-of-type(3) article {align-content: space-between;}
+div:nth-of-type(4) article {align-content: space-around;}
+div:nth-of-type(5) article {align-content: space-evenly;}
+div:nth-of-type(6) article {align-content: stretch;}
+
+.grid span[class^="box"] {box-sizing: border-box; color: inherit;}
+span[class*="01"] {grid-column: 1; grid-row: 1;}
+span[class*="02"] {grid-column: 1; grid-row: 2;}
+span[class*="03"] {grid-column: 1; grid-row: 3;}
+span[class*="04"] {grid-column: 1; grid-row: 4;}
+
+</style>
+</head>
+<body>
+
+
+<div class="grid small">
+<h1><code>align-content: start</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+</article>
+</div>
+
+
+<div class="grid small">
+<h1><code>align-content: end</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+</article>
+</div>
+
+<div class="grid small">
+<h1><code>align-content: space-between</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+</article>
+</div>
+
+
+<div class="grid small">
+<h1><code>align-content: space-around</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+</article>
+</div>
+
+
+<div class="grid small">
+<h1><code>align-content: space-evenly</code></h1>
+<article>
+<span class="box01"></span>
+<span class="box02"></span>
+<span class="box03"></span>
+<span class="box04"></span>
+</article>
+</div>
+
+
+</body>
+</html>

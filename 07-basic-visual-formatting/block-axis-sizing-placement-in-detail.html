@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>BVF Figure</title>
+<link rel="stylesheet" type="text/css" href="base2.css">
+<style type="text/css">
+html {font-size: 24px;}
+section {position: relative; width: 47%; height: 6em;}
+section > div {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+div[style] {padding: 0; border: 1px solid gray;}
+div[style] p {background: silver; margin: 1em 0;}
+.marginish {background: #FEE; border-block: 0.1px solid transparent;}
+#labels {font: 0.67em sans-serif;}
+#labels p {position: absolute;
+	display: flex; align-items: center; width: max-content; height: 0.9rem;
+	margin: 0.1rem 0 0 10px; padding: 0 0 0 0.75rem;
+	font-style: italic;
+	background:
+		url(i/arrowhead-up.svg) 0 0% / 0.4rem 0.2rem no-repeat,
+		url(i/arrowhead-down.svg) 0 100% / 0.4rem 0.2rem no-repeat,
+		linear-gradient(0deg,black,black) 0.175rem 50% / 1px 100% no-repeat,
+		linear-gradient(0deg,black,black) 0.175rem 50% / 0.5rem 1px no-repeat
+	;}
+#labels p:nth-child(1) {top: 0; left: 100%; height: 5.9rem; margin-left: 0;}
+#labels p:nth-child(2) {top: 1rem; left: 45%; height: 2.9rem;}
+#labels p:nth-child(3) {top: 0rem; left: 45%;}
+#labels p:nth-child(4) {top: 4rem; left: 45%;}
+#labels p:nth-child(5) {top: 5rem; left: 45%;}
+#labels p:nth-child(6) {top: 4rem; left: 75%; height: 1.9rem;}
+</style>
+</head>
+<body>
+
+<section>
+	<div style="height: 6rem;">
+		<div class="marginish">
+			<p style="height: 3em;">Paragraph half as tall</p>
+		</div>
+	</div>
+	<div id="labels">
+		<p><span>6em <code>div</code> height</p>
+		<p><span>3em <code>p</code> height</p>
+		<p><span>1em <code>p</code> margin</p>
+		<p><span>1em <code>p</code> margin</p>
+		<p><span>1em leftover space</p>
+		<p><span>2em distance</p>
+	</div>
+
+</section>
+
+</body>
+</html>

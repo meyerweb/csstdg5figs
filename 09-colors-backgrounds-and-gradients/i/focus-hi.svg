@@ -1,0 +1,12 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="150" height="150" viewbox="0 0 150 150" stroke="#F00" stroke-width="3" fill="none">
+
+<circle cx="75" cy="75" r="77" stroke="#F001"/>
+<circle cx="75" cy="75" r="66" stroke="#F002"/>
+<circle cx="75" cy="75" r="55" stroke="#F003"/>
+<circle cx="75" cy="75" r="44" stroke="#F004"/>
+<circle cx="75" cy="75" r="33" stroke="#F007" />
+<circle cx="75" cy="75" r="22" stroke="#F00A" />
+<circle cx="75" cy="75" r="11" stroke="#F00C" />
+<circle cx="75" cy="75" r="1" stroke="#F00" />
+
+</svg>

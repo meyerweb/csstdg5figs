@@ -3,26 +3,25 @@
 <head>
 <title>Figure 14argh</title>
 <style type="text/css">
-body {margin: 100px;}
+body {display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 50px; max-width: min-content; padding: 50px 0;}
 
-	div {border: 1px solid red; float: left; position: relative; margin: 125px;
-		background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
-		transform-style: preserve-3d; perspective: 500px; transition: 5s;}
-	div:nth-child(5) {clear: left;}
-	img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
-	span {position: absolute; top: 115%; left: -100%; width: 300%;
-		text-align: center; white-space: pre; font: 17px Anadale Mono, monospace;}
+div {border: 1px solid red; position: relative; 
+	background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
+	transform-style: preserve-3d; perspective: 500px; transition: 5s;}
+img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
+figure {margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;}
+figcaption {margin-block: 20px 0; white-space: pre; font: 20px Consolas, monospace; position: relative; z-index: 5;}
 
-	#ex01 {transform: rotate3d(1,1,0,45deg);}
-	#ex02 {transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);}
+#ex01 {transform: rotate3d(1,1,0,45deg);}
+#ex02 {transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);}
 
 
 </style>
 </head>
 <body>
 
-<div><img src="img/box-axes.png" alt="" id="ex01"><span>rotate3d(1,1,0,45deg)</span></div>
-<div><img src="img/box-axes.png" alt="" id="ex02"><span>rotateX(45deg) rotateY(45deg) rotateZ(0deg)</span></div>
+<figure><div><img src="img/box-axes.png" alt="" id="ex01"></div><figcaption>rotate3d(1,1,0,45deg)</figcaption></figure>
+<figure><div><img src="img/box-axes.png" alt="" id="ex02"></div><figcaption>rotateX(45deg) rotateY(45deg) rotateZ(0deg)</figcaption></figure>
 
 </body>
 </html>

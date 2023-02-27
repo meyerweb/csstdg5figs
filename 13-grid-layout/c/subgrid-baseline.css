@@ -1,0 +1,26 @@
+body {font: 1em Calibri, sans-serif; position: relative;}
+body > *:not(.lines) {border: 2px solid; padding: 0.5rem; z-index: 10;}
+body > :nth-child(1) {color: hsl(0deg,50%,50%); grid-row: 1;}
+body > :nth-child(2) {color: hsl(120deg,50%,50%); grid-row: 2;}
+body > :nth-child(3) {color: hsl(240deg,50%,50%); grid-row: 3;}
+header h1 {margin-block: 0.125em; font: bold 3em Arvo, sans-serif;}
+
+img {max-height: 75px; max-width: 75px;}
+.lines {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: 1 / -1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 1;
+	border-inline-start: 1px dashed #000A;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+.lines li {
+	grid-row: 1 / -1;
+	border-inline-end: 1px dashed #000A;
+}

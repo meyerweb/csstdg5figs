@@ -6,7 +6,8 @@
 <title>Padding, Borders, Outlines, and Margins</title>
 <link rel="stylesheet" type="text/css" href="c/pbom-baseline.css">
 <style type="text/css">
-body {float: left; width: auto;}
+body {width: min-content;}
+ol {display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2em;}
 ol, li {padding: 1em 0 2em; margin: 0;}
 ol li {list-style: none; float: left; margin: 0 4.5em;}
 p.image-box {border: 1px solid black; width: 150px; height: 150px;
@@ -14,26 +15,34 @@ p.image-box {border: 1px solid black; width: 150px; height: 150px;
 
 p b {position: absolute; font: 1em Consolas, monospace; border: 1px dotted rgba(0,0,0,0.5);}
 b.t, b.b {left: -3em; right: -3em;}
+b.t {left: 0;}
+b.b {right: 0;}
 b.r, b.l {top: -2em; bottom: -2em; padding: 0 0.25em;}
+b.r {top: 0;}
+b.l {bottom: 0;}
+
 b.t {border-width: 0 0 2px 0; top: 0;
-	background: url(i/arrow-down.png) no-repeat 88% 100%;
+	background: url(i/arrow-down.png) no-repeat 92% 100%;
 	background-size: 10px auto;}
 b.r {border-width: 0 0 0 2px; right: 0;
-	background: url(i/arrow-left.png) no-repeat 0% 92%;
+	background: url(i/arrow-left.png) no-repeat 0% 98%;
 	background-size: auto 10px;}
 b.b {border-width: 2px 0 0 0; bottom: 0;
-	background: url(i/arrow-up.png) no-repeat 12% 0%;
+	background: url(i/arrow-up.png) no-repeat 6% 0%;
 	background-size: 10px auto;}
 b.l {border-width: 0 2px 0 0; left: 0;
-	background: url(i/arrow-right.png) no-repeat 100% 8%;
+	background: url(i/arrow-right.png) no-repeat 100% 2%;
 	background-size: auto 10px;}
 
-
+p.image-box {background:
+	linear-gradient(#FFF9, #FFF9),
+	url(i/circle.png) 50% 50% / cover no-repeat;
+	}
 p b i {position: absolute; font-style: normal;}
-b.t i {right: 0%; bottom: 0%; margin-bottom: 0;}
-b.r i {bottom: -0.25em; left: 0%; margin-left: 0.25em;}
-b.b i {left: 0%; top: 0%; margin-top: 0.125em;}
-b.l i {top: 0%; right: 0%; margin-right: 0.25em;}
+b.t i {right: -1em; bottom: 0%; margin-bottom: 0;}
+b.r i {bottom: -1.25em; left: 0%; margin-left: 0.25em;}
+b.b i {left: -1.25em; top: 0%; margin-top: 0.125em;}
+b.l i {top: -1em; right: 0%; margin-right: 0.25em;}
 
 #li01 b.t {bottom: 49%;}
 #li01 b.r {left: 49%;}
@@ -50,6 +59,14 @@ b.l i {top: 0%; right: 0%; margin-right: 0.25em;}
 #li03 b.b {top: 42%;}
 #li03 b.l {right: 50%;}
 
+#results li {
+	border: 2em solid;
+	border-image-source: url(i/circle.png);
+	margin: 0 1em;
+	padding: 0;}
+#results li:nth-child(1) {border-image-slice: 50%;}
+#results li:nth-child(2) {border-image-slice: 67%;}
+#results li:nth-child(3) {border-image-slice: 75% 67% 58% 50%;}
 </style>
 </head>
 <body>
@@ -79,6 +96,12 @@ b.l i {top: 0%; right: 0%; margin-right: 0.25em;}
 <b class="l"><i>50%</i></b>
 </p>
 </li>
+</ol>
+
+<ol id="results">
+<li>The result of the slices shown immediately above.</li>
+<li>The result of the slices shown immediately above.</li>
+<li>The result of the slices shown immediately above.</li>
 </ol>
 
 </body>
