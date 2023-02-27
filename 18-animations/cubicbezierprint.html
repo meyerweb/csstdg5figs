@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en-US">
 <head>
-<title></title>
-<meta charset="utf-8">
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
+<meta charset="utf-8"/>
+<title>Visualization of Cubic bezier functions</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
 div {
 	border: 5px black solid;
 	color: white;
@@ -32,67 +32,67 @@ div:nth-of-type(1) {
 	border-color: red;
 }
 div:nth-of-type(1) {
-	-webkit-animation-iteration-count: 0.0000001;
+	animation-iteration-count: 0.0000001;
 }
 div:nth-of-type(2) {
-	-webkit-animation-iteration-count: 0.05;
+	animation-iteration-count: 0.05;
 }
 div:nth-of-type(3) {
-	-webkit-animation-iteration-count: 0.1;
+	animation-iteration-count: 0.1;
 }
 div:nth-of-type(4) {
-	-webkit-animation-iteration-count: 0.15;
+	animation-iteration-count: 0.15;
 }
 div:nth-of-type(5) {
-	-webkit-animation-iteration-count: 0.2;
+	animation-iteration-count: 0.2;
 }
 div:nth-of-type(6) {
-	-webkit-animation-iteration-count: 0.25;
+	animation-iteration-count: 0.25;
 }
 div:nth-of-type(7) {
-	-webkit-animation-iteration-count: 0.3;
+	animation-iteration-count: 0.3;
 }
 div:nth-of-type(8) {
-	-webkit-animation-iteration-count: 0.35;
+	animation-iteration-count: 0.35;
 }
 div:nth-of-type(9) {
-	-webkit-animation-iteration-count: 0.4;
+	animation-iteration-count: 0.4;
 }
 div:nth-of-type(10) {
-	-webkit-animation-iteration-count: 0.45;
+	animation-iteration-count: 0.45;
 }
 div:nth-of-type(11) {
-	-webkit-animation-iteration-count: 0.50;
+	animation-iteration-count: 0.50;
 }
 div:nth-of-type(12) {
-	-webkit-animation-iteration-count: 0.55;
+	animation-iteration-count: 0.55;
 }
 div:nth-of-type(13) {
-	-webkit-animation-iteration-count: 0.6;
+	animation-iteration-count: 0.6;
 }
 div:nth-of-type(14) {
-	-webkit-animation-iteration-count: 0.65;
+	animation-iteration-count: 0.65;
 }
 div:nth-of-type(15) {
-	-webkit-animation-iteration-count: 0.7;
+	animation-iteration-count: 0.7;
 }
 div:nth-of-type(16) {
-	-webkit-animation-iteration-count: 0.75;
+	animation-iteration-count: 0.75;
 }
 div:nth-of-type(17) {
-	-webkit-animation-iteration-count: 0.8;
+	animation-iteration-count: 0.8;
 }
 div:nth-of-type(18) {
-	-webkit-animation-iteration-count: 0.85;
+	animation-iteration-count: 0.85;
 }
 div:nth-of-type(19) {
-	-webkit-animation-iteration-count: 0.9;
+	animation-iteration-count: 0.9;
 }
 div:nth-of-type(20) {
-	-webkit-animation-iteration-count: 0.95;
+	animation-iteration-count: 0.95;
 }
 div:nth-of-type(21) {
-	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
 	border-color: red;
 }
 div:nth-of-type(n+22) {
@@ -111,12 +111,8 @@ article:before {
 	background-color: black;
 }
 </style>
-<style contenteditable id="editme">div {	-webkit-animation: width 5s cubic-bezier(0, 4, 1, -4) both;
+<style contenteditable id="editme">div {
 	animation: width 5s cubic-bezier(0, 4, 1, -4) both;
-}
-@-webkit-keyframes width {
-	0%   {height: 5px; width: 500px;}
-	100% {height: 5px; width: 100px;}
 }
 @keyframes width {
 	0%   {height: 5px; width: 500px;}
