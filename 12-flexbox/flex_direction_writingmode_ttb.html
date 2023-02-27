@@ -1,16 +1,14 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="jp-jp">
 <head>
   <meta charset="utf-8"/>
-  <title>Flex Items: flex-direction, rtl</title>  
-<link rel="stylesheet" href="c/examples.css">  
-<style  contenteditable>
+  <title lang="en-US">Flex Items: flex-direction, with tb-rtl languages</title>  
+  <link rel="stylesheet" href="c/examples.css"/>  
+<style>
 html {
-  -webkit-writing-mode: horizontal-tb;
   writing-mode: horizontal-tb;
 }
-  html {
-  -webkit-writing-mode: vertical-rl;
+html {
   writing-mode: vertical-rl;
 } 
 body {
@@ -19,14 +17,14 @@ body {
   flex-direction: row;
 }
 div {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0 0 0 / 0.1);
 }
 section {
   display: flex;
   wixdth: 400px;
   flex-direction: row;
-  margin-bottom: 20px; 
-  margin-right: 20px;
+  margin-block-end: 20px; 
+  margin-inline-end: 20px;
 }
 
 article > div {
@@ -49,21 +47,20 @@ body {
   text-align: center;
 }
 p {
-  margin-top: 0; 
-  -webkit-writing-mode: horizontal-tb;
+  margin-block-start: 0; 
   writing-mode: horizontal-tb;
 }
 div > div:nth-of-type(2) {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0 0 0 / 0.2);
 }
 div > div:nth-of-type(3) {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0 0 0 / 0.3);
 }
 div > div:nth-of-type(4) {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0 0 0 / 0.4);
 }
 div > div:nth-of-type(5) {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0 0 0 / 0.5);
 }
 </style>
 </head>
@@ -79,7 +76,7 @@ div > div:nth-of-type(5) {
       <div>五</div>
     </div>
   </article>
-  <p>flex-direction: row; ⤴</p>
+  <p lang="en-US">flex-direction: row; ⤴</p>
 </section>
 
 <section>
@@ -92,12 +89,12 @@ div > div:nth-of-type(5) {
       <div>五</div>
     </div>
   </article>
-  <p style="clear: both;">flex-direction: row-reverse;  ⤴ </p>
+  <p style="clear: both;" lang="en-US">flex-direction: row-reverse;  ⤴ </p>
 </section>
 </figure>
 <section>
   <article style="width: 45%; float: left">
-    <div style="flex-direction: column;">
+    <div style="flex-direction: column;" dir="rtl">
       <div>一</div>
       <div>二</div>
       <div>三</div>
@@ -105,12 +102,12 @@ div > div:nth-of-type(5) {
       <div>五</div>
     </div>
   </article>
-  <p>flex-direction: column; ⤴  </p>
+  <p lang="en-US">flex-direction: column; ⤴  </p>
 </section>
 
 <section>
   <article style="width: 45%; float: right">
-    <div style="flex-direction:  column-reverse;">
+    <div style="flex-direction:  column-reverse;" dir="rtl">
       <div>一</div>
       <div>二</div>
       <div>三</div>
@@ -118,8 +115,7 @@ div > div:nth-of-type(5) {
       <div>五</div>
     </div>
   </article>
-  <p>flex-direction: column-reverse; ⤴   </p>
+  <p lang="en-US">flex-direction: column-reverse; ⤴   </p>
 </section>
-
 </body>
 </html>
