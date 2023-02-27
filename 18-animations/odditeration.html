@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en-US">
 <head>
-<title></title>
-<meta charset="utf-8">
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
+<meta charset="utf-8"/>
+<title>Animation iteration count</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
 div {
 	border: 5px black solid;
 	padding: 10px;
@@ -34,30 +34,18 @@ article:before {
 }
 </style>
 <style contenteditable id="editme">div {
-	-webkit-animation: width 10s linear 5s;
-	-webkit-animation-iteration-count: 0.25;
-	animation: width 10s linear 5s;
-	animation-iteration-count: 0.25;
-}
-@-webkit-keyframes width {
-	0% {
-		height: 500px;
-		width: 500px;
-	}
-	100% {
-		height: 100px;
-		width: 100px;
-	}
+  animation: width 10s linear 5s;
+  animation-iteration-count: 0.25;
 }
 @keyframes width {
-	0% {
-		height: 500px;
-		width: 500px;
-	}
-	100% {
-		height: 100px;
-		width: 100px;
-	}
+  0% {
+    height: 500px;
+    width: 500px;
+  }
+   100% {
+    height: 100px;
+    width: 100px;
+  }
 }
 </style>
 </head>
