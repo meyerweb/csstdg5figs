@@ -45,7 +45,7 @@ nav ul ul {
 	transform: scale(1,0);
 	transform-origin: top center;
 }
-nav li:hover ul {
+nav li:is(:hover, :focus) ul {
 	transform: scale(1,1);
 }</style>
 </head>
@@ -53,7 +53,7 @@ nav li:hover ul {
 
 <nav>
   <ul>
-      <li>Bad
+      <li>About
         <ul>
             <li>Me</li>
             <li>You</li>
@@ -61,21 +61,21 @@ nav li:hover ul {
             <li>Nobody</li>
        </ul>
         </li>
-        <li>User
+        <li>Posts
         <ul>
             <li>Door Post</li>
             <li>Wall hanging</li>
             <li>Stair Banister</li>
             <li>Washington</li>
        </ul></li>
-        <li>Experience
+        <li>Topics
         <ul>
-            <li>CSS3</li>
+            <li>CSS</li>
             <li>JavaScript</li>
-            <li>HTML5</li>
+            <li>HTML</li>
             <li>SEO</li>
        </ul></li>
-        <li>Design
+        <li>Events
         <ul>
             <li>Party</li>
             <li>Dinner</li>
