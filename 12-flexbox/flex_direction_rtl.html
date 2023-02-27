@@ -1,18 +1,16 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="he-IL">
 <head>
   <meta charset="utf-8"/>
-  <title>Flex Items: flex-direction, rtl</title>  
-  
-<link rel="stylesheet" href="c/examples.css">  
-<style  contenteditable>
+  <title lang="en-US">Flex-direction in right to left languages</title>   
+<style>
 body {
   padding: 100px;
   font-size: 25px;
   text-align: center;
 }
 div {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0 0 0 / 0.1);
 }
 article > div {
   display: inline-flex;
@@ -31,21 +29,21 @@ p {
   margin-top: 0;
 }
 div > div:nth-of-type(2) {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0 0 0 / 0.2);
 }
 div > div:nth-of-type(3) {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0 0 0 / 0.3);
 }
 div > div:nth-of-type(4) {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0 0 0 / 0.4);
 }
 div > div:nth-of-type(5) {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0 0 0 / 0.5);
 }
 </style>
 </head>
-<body  dir="rtl">
-<article dir="rtl">
+<body dir="rtl">
+<article>
   <div style="flex-direction: row;">
     <div>א</div>
     <div>ב</div>
@@ -53,11 +51,8 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p> ⤴ ;flex-direction: row</p>
+  <p lang="en-US" dir="ltr">flex-direction: row;  ⤴</p>
 </article>
-
-
-
 
 <article>
   <div style="flex-direction: row-reverse;">
@@ -67,11 +62,8 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p> ⤴ ;flex-direction: row-reverse</p>
+  <p lang="en-US" dir="ltr">flex-direction: row-reverse; ⤴</p>
 </article>
-
-
-
 
 <article style="width: 45%; float: left">
   <div style="flex-direction: column;">
@@ -81,21 +73,18 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p>flex-direction: ⤴  column</p>
+  <p lang="en-US" dir="ltr">flex-direction: column; ⤴</p>
 </article>
 
-
-
-
 <article style="width: 45%; float: right">
-  <div style="flex-direction:  column-reverse;">
+  <div style="flex-direction: column-reverse;">
     <div>א</div>
     <div>ב</div>
     <div>ג</div>
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p>flex-direction: ⤴   column-reverse</p>
+  <p lang="en-US" dir="ltr">flex-direction: column-reverse; ⤴</p>
 </article>
 </body>
 </html>
