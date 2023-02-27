@@ -1,14 +1,14 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title></title>
-<meta charset="utf-8">
-<link type="text/css" href="../styles/style-edit.css" rel="stylesheet">
-<style type="text/css">
+<!DOCTYPE html>
+<html lang="en-US">
+<head>	
+<meta charset="utf-8"/>
+<title>Animation chaining with JavaScript</title>
+<link href="../styles/style-edit.css" rel="stylesheet">
+<style>
 li {
 	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+	border: 1px solid rgb(0 0 0 / 0.3);
+	box-shadow: 3px 3px 3px rgb(0 0 0 / 0.3);
 }
 </style>
 <style contenteditable id="editme">li {background-color: white; animation-fill-mode: forwards;}
@@ -45,52 +45,28 @@ li:nth-of-type(5) {animation-duration: 5s;}
 </ul>
 </body>
 <script>
-document.querySelectorAll('li')[0].addEventListener( 'webkitAnimationEnd',
-      function(e) {
-          document.querySelectorAll('li')[1].style.webkitAnimationName = 'orange';
-      },
-      false );
-
-document.querySelectorAll('li')[1].addEventListener( 'webkitAnimationEnd',
-      function(e) {
-          document.querySelectorAll('li')[2].style.webkitAnimationName = 'yellow';
-      },
-      false );
-
-document.querySelectorAll('li')[2].addEventListener( 'webkitAnimationEnd',
-      function(e) {
-          document.querySelectorAll('li')[3].style.webkitAnimationName = 'green';
-      },
-      false );
-
-document.querySelectorAll('li')[3].addEventListener( 'webkitAnimationEnd',
-      function(e) {
-          document.querySelectorAll('li')[4].style.webkitAnimationName = 'blue';
-      },
-      false );
-
-
 document.querySelectorAll('li')[0].addEventListener( 'animationend',
-      function(e) {
+      () => {
           document.querySelectorAll('li')[1].style.animationName = 'orange';
       },
       false );
 
 document.querySelectorAll('li')[1].addEventListener( 'animationend',
-      function(e) {
+      () =>  {
           document.querySelectorAll('li')[2].style.animationName = 'yellow';
       },
       false );
 
 document.querySelectorAll('li')[2].addEventListener( 'animationend',
-      function(e) {
+      () => {
           document.querySelectorAll('li')[3].style.animationName = 'green';
       },
       false );
 
 document.querySelectorAll('li')[3].addEventListener( 'animationend',
-      function(e) {
+      () =>  {
           document.querySelectorAll('li')[4].style.animationName = 'blue';
       },
-      false );</script>
+      false );
+</script>
 </html>
