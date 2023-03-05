@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Figure 2-??</title>
+<style type="text/css">
+.arena {display: grid; grid-template-columns: repeat(3,1fr); gap: 1em; width: 47em;}
+:is(h1, h2, h3, h4, h5, h6) {border: 1px dashed gray; margin: 0.25em 0; padding: 0.125em;}
+:is(h1, h2, h3, h4, h5, h6):has(img) {border-bottom: 0.25em solid red;}
+:is(h1, h2, h3, h4, h5, h6):not(:has(img)) {border-bottom: 0.25em dotted green;}
+</style>
+</head>
+<body>
+
+<section class="arena">
+
+<h1>Text</h1>
+<h1><img src="i/short.gif" alt="Image"></h1>
+<h1>Text and <img src="i/short.gif" alt="Image"></h1>
+
+<h2>Text</h2>
+<h2><img src="i/short.gif" alt="Image"></h2>
+<h2>Text and <img src="i/short.gif" alt="Image"></h2>
+
+<h3>Text</h3>
+<h3><img src="i/short.gif" alt="Image"></h3>
+<h3>Text and <img src="i/short.gif" alt="Image"></h3>
+
+<h4>Text</h4>
+<h4><img src="i/short.gif" alt="Image"></h4>
+<h4>Text and <img src="i/short.gif" alt="Image"></h4>
+
+<h5>Text</h5>
+<h5><img src="i/short.gif" alt="Image"></h5>
+<h5>Text and <img src="i/short.gif" alt="Image"></h5>
+
+<h6>Text</h6>
+<h6><img src="i/short.gif" alt="Image"></h6>
+<h6>Text and <img src="i/short.gif" alt="Image"></h6>
+
+</section>
+
+</body>
+</html>
