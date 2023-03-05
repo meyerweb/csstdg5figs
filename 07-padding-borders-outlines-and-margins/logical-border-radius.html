@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/pbom-baseline.css">
+<style type="text/css">
+body {width: auto; max-width: max-content; font: 1.25em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+.arena {width: 850px; display: flex; align-items: start;}
+[id^="cb"] {margin: 1em; position: relative;}
+[id^="cb"] p {background: silver;}
+[id^="cb"] code {font-size: 95%;}
+</style>
+<style type="text/css">
+[id^="cb"] {border: 0 solid;}  /* "cb" for "containing block" */
+p { inline-size: 20ch; margin-block: 0; padding: 0.5em;
+	border: thick solid;
+	border-start-end-radius: 2em 3em;
+}
+
+#cb1 {writing-mode: horizontal-tb;}
+#cb1 p {inline-size: 30ch;}
+#cb2 {writing-mode: vertical-rl;}
+#cb3 {writing-mode: vertical-lr;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<div id="cb1">
+<p>This is a paragraph with some text.  Its block-start, inline-end corner has been given a radius of <code>2em</code>, which in this case is the top right corner.</p>
+</div>
+<div id="cb2">
+<p>This is a paragraph with some text.  Its block-start, inline-end corner has been given a radius of <code>2em</code>, which in this case is the bottom right corner.</p>
+</div>
+<div id="cb3">
+<p>This is a paragraph with some text.  Its block-start, inline-end corner has been given a radius of <code>2em</code>, which in this case is the bottom left corner.</p>
+</div>
+</main>
+
+</body>
+</html>
