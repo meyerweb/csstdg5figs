@@ -5,32 +5,29 @@
   <title lang="en-US">Flex Items: flex-direction, with tb-rtl languages</title>  
   <link rel="stylesheet" href="c/examples.css"/>  
 <style>
-html {
-  writing-mode: horizontal-tb;
-}
-html {
-  writing-mode: vertical-rl;
-} 
 body {
-  padding: 100px; 
-  display: flex; 
-  flex-direction: row;
+  font-size: 25px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: auto auto;
 }
 div {
   background-color: rgba(0 0 0 / 0.1);
 }
-section {
+article {
   display: flex;
-  wixdth: 400px;
   flex-direction: row;
   margin-block-end: 20px; 
   margin-inline-end: 20px;
+  writing-mode: vertical-rl;
 }
 
 article > div {
   display: inline-flex;
   border: 1px dashed;
   padding: 10px;
+  margin: auto;
 }
 div > div {
   border: 1px solid;
@@ -41,6 +38,7 @@ div > div {
   flex: 1 1 50px;
   max-width: 200px;
   max-height: 200px;
+  text-align: center;
 }
 body {
   font-size: 25px;
@@ -62,11 +60,17 @@ div > div:nth-of-type(4) {
 div > div:nth-of-type(5) {
   background-color: rgba(0 0 0 / 0.5);
 }
+article:nth-of-type(1) {grid-row: 1/-1; grid-column: 1;}
+article:nth-of-type(2) {grid-row: 1/-1; grid-column: 2;}
+article:nth-of-type(3) {grid-row: 1; grid-column: 3;}
+article:nth-of-type(4) {grid-row: 2; grid-column: 3; align-self: end;}
+
+article:nth-of-type(-n+2) > div {width: max-content;}
+article:nth-of-type(-n+2) > div div {height: auto; line-height: 1.4;}
 </style>
 </head>
 <body>
-<figure>
-<section>
+
   <article>
     <div style="flex-direction: row;">
       <div>一</div>
@@ -75,11 +79,9 @@ div > div:nth-of-type(5) {
       <div>四</div>
       <div>五</div>
     </div>
+    <p lang="en-US">row</p>
   </article>
-  <p lang="en-US">flex-direction: row; ⤴</p>
-</section>
 
-<section>
   <article>
     <div style="flex-direction: row-reverse;">
       <div>一</div>
@@ -88,12 +90,10 @@ div > div:nth-of-type(5) {
       <div>四</div>
       <div>五</div>
     </div>
+    <p style="clear: both;" lang="en-US">row-reverse</p>
   </article>
-  <p style="clear: both;" lang="en-US">flex-direction: row-reverse;  ⤴ </p>
-</section>
-</figure>
-<section>
-  <article style="width: 45%; float: left">
+
+  <article>
     <div style="flex-direction: column;" dir="rtl">
       <div>一</div>
       <div>二</div>
@@ -101,21 +101,19 @@ div > div:nth-of-type(5) {
       <div>四</div>
       <div>五</div>
     </div>
+    <p lang="en-US">column</p>
   </article>
-  <p lang="en-US">flex-direction: column; ⤴  </p>
-</section>
 
-<section>
-  <article style="width: 45%; float: right">
-    <div style="flex-direction:  column-reverse;" dir="rtl">
+  <article>
+    <div style="flex-direction: column-reverse;" dir="rtl">
       <div>一</div>
       <div>二</div>
       <div>三</div>
       <div>四</div>
       <div>五</div>
     </div>
+    <p lang="en-US">column-reverse</p>
   </article>
-  <p lang="en-US">flex-direction: column-reverse; ⤴   </p>
-</section>
+
 </body>
 </html>

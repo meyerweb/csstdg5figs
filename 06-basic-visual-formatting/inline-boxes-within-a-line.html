@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Figure 5-19</title>
+<style type="text/css">
+html {
+	background: #CCC;
+}
+body {
+	max-width: max-content;
+	padding: 0.5rem;
+	background: #FFF;
+}
+article {
+	display: flex;
+	align-items: center;
+}
+div {
+	max-width: max-content;
+	margin: 1.5em 0;
+	border: 2px solid #000;
+}
+div p {
+	margin: 0;
+	font-size: 36px;
+	line-height: 1em;
+	color: rgba(0 64 128 / 0.75);
+}
+div p > * {
+	border: 1px solid #444;
+	background-image: linear-gradient(rgb(0 0 0 / 0.25),rgb(0 0 0 / 0.25));
+	background-repeat: no-repeat;
+}
+div p > strong {
+	font-size: 2em;
+	background-size: 100% 30px;
+	background-position: 50% 50%;
+}
+
+article > span, ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Calibri;
+	font-size: 1.5rem;
+	font-weight: 100;
+	color: #666;
+}
+article > span {
+	padding-inline: 1.5em 0;
+	background-image: linear-gradient(270deg,#0008,#000F);
+	background-repeat: no-repeat;
+	background-size: 1.25em 2px;
+	background-position: 1px 50%;
+}
+ul {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+}
+ul li {
+	display: flex;
+	align-items: center;
+}
+ul b {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 1.5em;
+	height: 1.5em;
+	margin-inline: 0 0.25em;
+	border: 1px solid #444;
+}
+ul li:nth-child(1) b {
+	border: 2px solid #000;
+}
+ul li:nth-child(3) b {
+	background-image: linear-gradient(rgb(0 0 0 / 0.25),rgb(0 0 0 / 0.25));
+	border: none;
+}
+</style>
+</head>
+<body>
+
+<article>
+<div><p><span>text that is </span><strong>strongly emphasized</strong><span> and is also</span></p></div>
+<span>15 px tall line box</span>
+</article>
+
+<ul>
+<li><b></b>line box</li>
+<li><b></b>content-area</li>
+<li><b></b>inline box</li>
+</ul>
+
+</body>
+</html>

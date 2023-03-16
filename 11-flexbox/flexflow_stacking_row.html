@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="code">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: flex-wrap</title>
+
+  <link rel="stylesheet" href="c/examples.css"/> 
+  <style contenteditable>
+body {
+  text-align: center;
+  padding: 3em;
+  font-family: Open Sans, sans-serif;
+  font-size: 25px;
+}
+
+article + article {
+	margin-top: 2.5em;
+}
+section {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.5em;
+  position: relative;
+  border: 1px dashed;
+  padding: 10px;
+  background: #EEE;
+  width: 30em;
+  height: 11em;
+}
+section > span {
+  border: 1px solid;
+  margin-block: 0.25em;
+  margin-inline: 0.25em;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+section > div {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.start, .end {
+	font: 1em Helvetica, sans-serif;
+}
+section > div.main {
+	top: 112px;
+	left: 0;
+	right: 0;
+	color: blue;
+	background: url(i/arrow-right-blue.svg) 100% 50% / 0.33em 0.75em no-repeat,
+		linear-gradient(to left,blue,blue)  50% 50% / 100% 3px no-repeat,
+		linear-gradient(to left,blue,blue)  0% 50% / 3px 2ch no-repeat;
+} 
+section[style*="row-reverse"] > div.main {
+	background: url(i/arrow-left-blue.svg) 0% 50% / 0.33em 0.75em no-repeat,
+		linear-gradient(to left,blue,blue)  50% 50% / 100% 3px no-repeat,
+		linear-gradient(to left,blue,blue)  100% 50% / 3px 2ch no-repeat;
+} 
+
+section > div.main > .start {
+	translate: -63% 0;
+	rotate: -90deg;
+}
+section > div.main > .end {
+	translate: 63% 0;
+	rotate: 90deg;
+}
+
+section > div.cross {
+	flex-direction: column;
+	top: 0;
+	bottom: 0;
+	left: -2.1em;
+	color: red;
+	background: url(i/arrow-down-red.svg) 50% 100% / 0.75em 0.33em no-repeat,
+		linear-gradient(to top,red,red)  50% 50% / 3px 100% no-repeat,
+		linear-gradient(to top,red,red)  50% 0% / 2ch 3px no-repeat;
+}
+section[style*="row-reverse"] > div.cross {
+	left: auto;
+	right: -2.1em
+}
+section > div.cross > .start {
+	translate: 0 -1.15em;
+}
+section > div.cross .end {
+	translate: 0 1.2em;
+}
+section > div.lines {
+	color: green;
+	flex-direction: column;
+	gap: 1px;
+	top: 0;
+	left: 0.25em;
+	right: 0.25em;
+	align-items: stretch;
+}
+section > div.lines span {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	margin: 0;
+	padding-block: 6px;
+	padding-inline: 0.25em;
+	border-block: 2px dashed;
+	font-size: 1rem;
+	background: url(i/arrow-up-green.svg), url(i/arrow-down-green.svg), linear-gradient(green, green);
+	background-repeat: no-repeat;
+	background-size: 12px 7px, 12px 7px, 2px 100%;
+	background-position: 50% 0, 50% 100%, 50% 50%;
+}
+section > div.lines span b {
+	background: #EEE;
+	padding: 0.1em;
+	margin-inline: calc(50% - 2.5em) 0;
+}
+
+section > div.lines span:nth-of-type(1) {height: 109px;}
+section > div.lines span:nth-of-type(2) {height: 139px;}
+section > div.lines span:nth-of-type(1) b {margin-top: 3.67em;}
+
+section + p {
+  margin-block: 0.25em 0;
+  font-family: Consolas, monospace;
+}
+</style>
+</head>
+<body>
+
+<article>
+<section style="flex-flow: wrap row">
+  <span>A</span>
+  <span>Banana</span>
+  <span>CCC</span>
+  <span>DDDD</span>
+  <span>EEE<br>EE</span>
+  <span>FFF<br>FFF</span>
+  <span>GGGG<br>GGGG</span>
+  <span>HHH<br>HHH<br>HHH</span>
+  <span>IIIII<br>IIIII</span>
+  <span>JJJJJ<br>JJJ<br>JJJJJ</span>
+<div class="lines">
+<span><b>Flex line #1</b></span>
+<span><b>Flex line #2</b></span>
+</div>
+<div class="main">
+<span class="start">Main-start</span>
+<span class="end">Main-end</span>
+</div>
+<div class="cross">
+<span class="start">Cross-start</span>
+<span class="end">Cross-end</span>
+</div>
+</section>
+<p>flex-row: wrap row</p>
+</article>
+
+<article>
+<section style="flex-flow: wrap row-reverse">
+  <span>A</span>
+  <span>Banana</span>
+  <span>CCC</span>
+  <span>DDDD</span>
+  <span>EEE<br>EE</span>
+  <span>FFF<br>FFF</span>
+  <span>GGGG<br>GGGG</span>
+  <span>HHH<br>HHH<br>HHH</span>
+  <span>IIIII<br>IIIII</span>
+  <span>JJJJJ<br>JJJ<br>JJJJJ</span>
+<div class="lines">
+<span><b>Flex line #1</b></span>
+<span><b>Flex line #2</b></span>
+</div>
+<div class="main">
+<span class="start">Main-end</span>
+<span class="end">Main-start</span>
+</div>
+<div class="cross">
+<span class="start">Cross-start</span>
+<span class="end">Cross-end</span>
+</div>
+</section>
+<p>flex-row: wrap row-reverse</p>
+</article>
+
+</body>
+</html>

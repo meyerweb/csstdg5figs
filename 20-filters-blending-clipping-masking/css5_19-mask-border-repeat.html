@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Figure</title>
+<style type="text/css">
+.arena {
+	display: grid;
+	grid-template-columns: repeat(4,auto);
+	gap: 75px;
+}
+p {
+	border: 50px solid; 
+	outline: 10px solid red;
+	background: gray; 
+	height: 75px; 
+	width: 175px;
+	margin: 0 auto;
+	-webkit-mask-box-image-source: url(i/circles.png); 
+	-webkit-mask-box-image-slice: 33%;
+}
+figure {margin: 0; padding: 0;}
+figcaption {font: 25px Consolas, monospace; text-align: center; border-bottom: 1px solid; width: 225px; margin: 0 auto 0.75em;}
+p.p1 {-webkit-mask-box-image-repeat: stretch;}
+p.p2 {-webkit-mask-box-image-repeat: repeat;}
+p.p3 {-webkit-mask-box-image-repeat: round;}
+p.p4 {-webkit-mask-box-image-repeat: space;}
+p.p6 {-webkit-mask-box-image-repeat: stretch space;}
+p.p7 {-webkit-mask-box-image-repeat: repeat round;}
+p.p8 {-webkit-mask-box-image-repeat: round space;}
+p.p5 {-webkit-mask-box-image-repeat: space stretch;}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<figure><figcaption>stretch</figcaption><p class="p1"></p></figure>
+<figure><figcaption>repeat</figcaption><p class="p2"></p></figure>
+<figure><figcaption>round</figcaption><p class="p3"></p></figure>
+<figure><figcaption>space</figcaption><p class="p4"></p></figure>
+<figure><figcaption>stretch space</figcaption><p class="p6"></p></figure>
+<figure><figcaption>repeat round</figcaption><p class="p7"></p></figure>
+<figure><figcaption>round space</figcaption><p class="p8"></p></figure>
+<figure><figcaption>space stretch</figcaption><p class="p5"></p></figure>
+
+</div>
+
+</body>
+</html>

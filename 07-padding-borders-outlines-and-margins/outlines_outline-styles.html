@@ -11,8 +11,9 @@ ol {display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; p
 li {margin: 0.75em 0; padding: 0.5em 1em; width: 47%; box-sizing: border-box;
 	list-style: none; text-align: center; font-family: "Consolas", monospace;
 	flex-grow: 0;
-	border-width: 0.5em; border-color: gray;}
-#l01 {outline-style: none; width: 95%;}
+	outline-width: 0.5em; outline-color: gray;}
+#l01 {outline-style: none;}
+#l02 {outline-style: auto;}
 #l03 {outline-style: solid;}
 #l04 {outline-style: dotted;}
 #l05 {outline-style: dashed;}
@@ -27,6 +28,7 @@ li {margin: 0.75em 0; padding: 0.5em 1em; width: 47%; box-sizing: border-box;
 
 <ol>
 <li id="l01">outline-style: none</li>
+<li id="l02">outline-style: auto</li>
 <li id="l03">outline-style: solid</li>
 <li id="l06">outline-style: double</li>
 <li id="l04">outline-style: dotted</li>

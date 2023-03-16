@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="code">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: flex grow</title> 
+  <link rel="stylesheet" href="c/examples.css"/>
+
+<style>
+body {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+div {
+  background-color: rgba(0,0,0,0.1);
+}
+article  {
+  width: 750px; 
+  box-sizing: content-box;
+}
+article > div {
+  display: flex;
+  border: 1px dashed;
+  padding: 2px;
+  min-height: 100px; 
+  box-sizing: content-box;
+}
+div > div {
+  position: relative;
+  border: 1px solid;
+  margin: 2px; /* this makes the extra distributed space available less than 450px */
+  padding: 40px 0; 
+  width: 100px; 
+  font-size: 1rem;
+  box-sizing: content-box;
+}
+article div span {
+	position: absolute;
+	bottom: 0;
+	right: -1px;
+	width: 105px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1em;
+	direction: rtl;
+}
+article div span b {
+	border: 2px solid #666;
+	border-top: none;
+	margin-left: -2px;
+}
+article + article div b {
+	width: 119px;
+}
+p {
+  margin-top: 0.25em;
+}
+</style>
+</head>
+<body>
+
+<article>
+  <div>
+    <div style="flex: 2 1 auto">flex: 2 1 auto<span><b></b><b></b></span></div>
+    <div style="flex: 1 1 auto">flex: 1 1 auto<span><b></b></span></div>
+    <div style="flex: 3 1 auto">flex: 3 1 auto<span><b></b><b></b><b></b></span></div>
+  </div>
+  <p>flex-basis: auto;</p>
+</article>
+
+<article>
+  <div>
+    <div style="flex: 2 1 0">flex: 2 1 0<span><b></b><b></b></span></div>
+    <div style="flex: 1 1 0">flex: 1 1 0<span><b></b></span></div>
+    <div style="flex: 3 1 0">flex: 3 1 0<span><b></b><b></b><b></b></span></div>
+  </div>
+  <p>flex-basis: 0;</p>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Figure</title>
+<style type="text/css">
+.arena {
+	display: flex;
+	gap: 20px;
+}
+p {
+	border: 50px solid; 
+	outline: 10px solid red;
+	background: gray; 
+	height: 50px; 
+	width: 50px;
+	margin: 10px;
+ 
+}
+p.one {-webkit-mask-box-image-slice: 33% fill; -webkit-mask-box-image-source: url(i/circles-filled.svg);}
+p.two {-webkit-mask-box-image-slice: 33% fill;-webkit-mask-box-image-source: url(i/circles.svg);}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<p class="one">no fill here</p>
+<p class="two">fill applied</p>
+
+</div>
+
+</body>
+</html>

@@ -4,17 +4,46 @@
 <meta charset="utf-8" />
 <title>Simple linear gradients</title>
 <style type="text/css">
-section {background: gold; overflow: hidden; padding: 25px; height: 2em; width: 800px;}
+body {max-width: max-content; height: 155px;}
+section {background: black; padding: 0; margin-left: 1em; height: 75px; width: 800px;}
 #spectrum {background-image: linear-gradient(90deg,
-		red, orange 25px, yellow 50px, green 75px, blue 100px, indigo 125px, violet 150px)};
+		red, orange 25px, yellow 50px, green 75px, blue 100px, indigo 125px, violet 150px);}
+#ex01 {position: relative;}
+b {position: absolute; top: 0%;
+	font: 12px Helvetica, monospace; text-align: center;
+	width: 3em; margin-left: -1.5em; margin-top: 75px; padding-top: 1.5em;
+	background: linear-gradient(to right,
+		transparent, transparent 50%,
+		black 50%, black 52%,
+		transparent 52%);
+	background-size: 100% 1.25em;
+	background-repeat: no-repeat;}
+b:nth-child(even) {
+	padding-top: 4em;
+	background-size: 100% 3.75em;
+}
+.r {left: 0;}
+.o {left: 25px;}
+.y {left: 50px;}
+.g {left: 75px;}
+.b {left: 100px;}
+.i {left: 125px;}
+.v {left: 150px;}
 </style>
  </head>
  <body>
 
 <section id="spectrum">
 
-<div id="ex01"><b></b></div>
-<div id="ex02"><b></b></div>
+<div id="ex01">
+<b class="r">0px red</b>
+<b class="o">25px orange</b>
+<b class="y">50px yellow</b>
+<b class="g">75px green</b>
+<b class="b">100px blue</b>
+<b class="i">125px indigo</b>
+<b class="v">150px violet</b>
+</div>
 
 </section>
 

@@ -21,15 +21,20 @@ img {
 aside {
 	background-color: rgba(0,0,0,0.1);
 	display: flex;
-	border: 1px dashed;
+	border: 1px dotted;
 	padding: 10px;
 	align-items: center;
 	line-height: 100px;
 }
-	aside > * {
+aside > * {
 	border: 1px solid;
 	margin: 0 10px;
 	padding: 0 10px;
+}
+aside > span {
+	border-style: dashed;
+	align-self: center;
+	line-height: 1.2em;
 }
 </style>
 </head>
@@ -41,7 +46,7 @@ aside {
 <h1>Header</h1>
 
 <img src="images/foo.jpg" alt="">
-Some text <a href="foo.html">with a link</a> and more text
+<span>Some text</span> <a href="foo.html">with a link</a> <span>and more text</span>
 
 </aside>
 </body>

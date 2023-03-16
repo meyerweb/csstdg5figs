@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <title lang="en-US">Flex-direction in right to left languages</title>   
+  <link rel="stylesheet" href="c/examples.css"/>
 <style>
 body {
-  padding: 100px;
   font-size: 25px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  grid-template-rows: auto auto;
 }
 div {
   background-color: rgba(0 0 0 / 0.1);
@@ -21,12 +24,12 @@ div > div {
   border: 1px solid;
   height: 50px;
   padding: 0 10px;
-  margin: 10px;
+  margin: 5px;
   line-height: 50px;
   flex: 1 1 auto;
 }
 p {
-  margin-top: 0;
+  margin: 0;
 }
 div > div:nth-of-type(2) {
   background-color: rgba(0 0 0 / 0.2);
@@ -40,9 +43,17 @@ div > div:nth-of-type(4) {
 div > div:nth-of-type(5) {
   background-color: rgba(0 0 0 / 0.5);
 }
+article:nth-of-type(1) {grid-row: 1; grid-column: 3;}
+article:nth-of-type(2) {grid-row: 2; grid-column: 3; align-self: end;}
+article:nth-of-type(3) {grid-row: 1/-1; grid-column: 2;}
+article:nth-of-type(4) {grid-row: 1/-1; grid-column: 1;}
+
+article:nth-of-type(n+3) > div {width: 60%;}
+article:nth-of-type(n+3) > div div {height: auto; line-height: 1.4;}
 </style>
 </head>
 <body dir="rtl">
+
 <article>
   <div style="flex-direction: row;">
     <div>א</div>
@@ -51,7 +62,7 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p lang="en-US" dir="ltr">flex-direction: row;  ⤴</p>
+  <p lang="en-US" dir="ltr">row</p>
 </article>
 
 <article>
@@ -62,10 +73,10 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p lang="en-US" dir="ltr">flex-direction: row-reverse; ⤴</p>
+  <p lang="en-US" dir="ltr">row-reverse</p>
 </article>
 
-<article style="width: 45%; float: left">
+<article>
   <div style="flex-direction: column;">
     <div>א</div>
     <div>ב</div>
@@ -73,10 +84,10 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p lang="en-US" dir="ltr">flex-direction: column; ⤴</p>
+  <p lang="en-US" dir="ltr">column</p>
 </article>
 
-<article style="width: 45%; float: right">
+<article>
   <div style="flex-direction: column-reverse;">
     <div>א</div>
     <div>ב</div>
@@ -84,7 +95,7 @@ div > div:nth-of-type(5) {
     <div>ד</div>
     <div>ה</div>
   </div>
-  <p lang="en-US" dir="ltr">flex-direction: column-reverse; ⤴</p>
+  <p lang="en-US" dir="ltr">column-reverse</p>
 </article>
 </body>
 </html>

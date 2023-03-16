@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Chapter 5 Figures</title>
+<link rel="stylesheet" text="text/css" href="c/base.css">
+<style type="text/css">
+body {
+	width: min-content;
+	display: grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: repeat(2,auto);
+	gap: 0 1.5em;
+	justify-content: space-between;
+	padding: 1em; padding-block-end: 0; font-size: 1.5em; line-height: 1.2;
+	font-family: Literata, Helvetica;
+}
+p {width: 8.25em;}
+p::before {content: attr(data-type); font-variant-caps: normal; font: bold 1em Consolas, monospace; display: block; text-align: center; padding-block-end: 0.25em; margin-block-end: 0.5em; border-bottom: 1px solid silver; font-size: 1.2rem;}
+.variant1 {font-variant-caps: small-caps;}
+.variant3 {font-variant-caps: petite-caps;}
+.variant5 {font-variant-caps: titling-caps;}
+.variant2 {font-variant-caps: all-small-caps;}
+.variant4 {font-variant-caps: all-petite-caps;}
+.variant6 {font-variant-caps: unicase;}
+
+:is(.variant3, .variant4) b {font-weight: normal; font-size: 0.875em;}
+.variant6 b {font-weight: normal; font-size: 1.33em; line-height: 0.5; font-weight: 300;}
+.variant6 i {font-style: normal; font-size: 1em; line-height: 0.5;}
+</style>
+</head>
+<body>
+
+<p class="variant1" data-type="small-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant2" data-type="all-small-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant3" data-type="petite-caps†">S<b>phinx of </b>B<b>lack </b>Q<b>uartz</b>, HEAR<b> my </b>V<b>ow</b>.</p>
+<p class="variant4" data-type="all-petite-caps†"><b>Sphinx of Black Quartz, HEAR my Vow.</b></p>
+<p class="variant5" data-type="titling-caps†">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant6" data-type="unicase†">SPh<i>i</i><b>nx o</b>f Bl<b>ac</b>k Q<b>uar</b><i>t</i><b>z</b>, HEAR <b>m</b>Y V<b>ow</b>.</p>
+
+
+</body>
+</html>

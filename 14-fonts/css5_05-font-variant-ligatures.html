@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Chapter 5 Figures</title>
+<link rel="stylesheet" text="text/css" href="c/base.css">
+<style type="text/css">
+body {
+	width: min-content;
+	display: grid;
+	grid-template-columns: repeat(5,auto);
+	gap: 0 1.5em;
+	justify-content: space-between;
+	padding: 1em; padding-block-end: 0; font-size: 1.5em; line-height: 1.2;
+	font-family: "EB Garamond", Literata, Helvetica;
+}
+p {width: max-content;}
+p::before {content: attr(data-type); font-variant-caps: normal; font: 1em Consolas, monospace; display: block; text-align: center; padding-block-end: 0.25em; margin-block-end: 0.5em; border-bottom: 1px solid gray; font-size: 1rem;}
+
+.variant0 {font-variant-ligatures: normal;}
+.variant1 {font-variant-ligatures: common-ligatures;}
+.variant2 {font-variant-ligatures: no-common-ligatures;}
+.variant3 {font-variant-ligatures: discretionary-ligatures;}
+.variant4 {font-variant-ligatures: no-discretionary-ligatures;}
+.variant5 {font-variant-ligatures: historical-ligatures;}
+.variant6 {font-variant-ligatures: no-historical-ligatures;}
+.variant7 {font-variant-ligatures: contextual;}
+.variant8 {font-variant-ligatures: no-contextual;}
+</style>
+</head>
+<body>
+<p class="variant0" data-type="normal"                    >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant1" data-type="common-ligatures"          >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant3" data-type="discretionary-ligatures"   >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant5" data-type="historical-ligatures"      >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant7" data-type="contextual"                >Black Quartz waffles<br>feed the first orogenes.</p>
+
+<p class="variant0" data-type="normal"                    >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant2" data-type="no-common-ligatures"       >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant4" data-type="no-discretionary-ligatures">Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant6" data-type="no-historical-ligatures"   >Black Quartz waffles<br>feed the first orogenes.</p>
+<p class="variant8" data-type="no-contextual"             >Black Quartz waffles<br>feed the first orogenes.</p>
+
+</body>
+</html>

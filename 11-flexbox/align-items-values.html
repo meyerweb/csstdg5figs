@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Flex Items: align-content</title><link rel="stylesheet" href="c/examples.css"/>
+<style contenteditable>
+html {
+	font-size: 2vmin;
+}
+body {
+	display: grid;
+	grid-template-columns: 8fr 9fr;
+	text-align: center;
+	padding: 0.5rem;
+	margin: 0;
+} 
+div, div > p {
+	background-color: rgba(0,0,0,0.1);
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3em 2em;
+	padding: 0 2em;
+	align-items: start;
+	align-content: start;
+}
+section:first-child {
+	justify-content: end;
+}
+section:first-child figure div {
+	font-size: 1.33em;
+}
+section + section {
+	border-left: 1px dotted black;
+}
+figure {
+	align-self: stretch;
+	margin: 0;
+	padding: 0;
+}
+figure > div {
+	display: flex;
+	flex-direction: row;
+	gap: 0.25em;
+	border: 1px dashed;
+	padding: 0.25em;
+} 
+.rows figure {
+	width: 45%;
+}
+.rows figure div {
+	height: 5em;
+}
+.rows figure div p  {
+	white-space: pre-wrap;
+}
+.cols figure div {
+	flex-direction: column;
+	height: 14.6em;
+}
+.cols figure:nth-last-child(-n+2) div {
+	height: auto;
+}
+
+figcaption {
+	font: bold 1.25em monospace;
+}
+div > p {
+	border: 1px solid; 
+	margin: 0; 
+	padding: 0.25em;
+}
+div p:nth-of-type(1) {
+	font-size: 1.67em;
+}
+div p:nth-of-type(2) {
+	font-size: 1.33em;
+}
+div p:nth-of-type(3) {
+	font-size: 1.0em;
+}
+div p:nth-of-type(4) {
+	font-size: 0.8em;
+}
+div p:nth-of-type(5) {
+	font-size: 0.67em;
+}
+</style>
+</head>
+<body> 
+
+<section class="rows">
+
+<figure>
+<div style="align-items: stretch;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>stretch</figcaption>
+</figure>
+<figure>
+<div style="align-items: center;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>center</figcaption>
+</figure>
+<figure>
+<div style="align-items: flex-start;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>start<br>
+flex-start<br>
+self-start</figcaption>
+</figure>
+<figure>
+<div style="align-items: flex-end;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>end<br>flex-end<br>self-end</figcaption>
+</figure>
+<figure>
+<div style="align-items: baseline;"> 
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>baseline</figcaption>
+</figure>
+<figure>
+<div style="align-items: last baseline;"> 
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>last baseline</figcaption>
+</figure>
+
+</section>
+
+<section class="cols">
+
+<figure>
+<div style="align-items: stretch;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>stretch</figcaption>
+</figure>
+<figure>
+<div style="align-items: center;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>center</figcaption>
+</figure>
+<figure>
+<div style="align-items: flex-start;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>start<br>
+flex-start<br>
+self-start</figcaption>
+</figure>
+<figure>
+<div style="align-items: flex-end;">
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>end<br>flex-end<br>self-end</figcaption>
+</figure>
+<figure>
+<div style="align-items: baseline;"> 
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>baseline</figcaption>
+</figure>
+<figure>
+<div style="align-items: last baseline;"> 
+<p>One
+</p>
+<p>Two
+Two
+</p>
+<p>Three
+Three
+Three
+</p>
+<p>Four
+Four
+Four
+Four
+</p>
+<p>Five
+Five
+Five
+Five
+Five
+</p>
+</div>
+<figcaption>last baseline</figcaption>
+</figure>
+
+</section>
+
+</body>
+</html>

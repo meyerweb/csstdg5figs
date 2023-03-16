@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="code">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: flex-wrap</title>
+
+  <link rel="stylesheet" href="c/examples.css"/> 
+  <style contenteditable>
+body {
+  text-align: center;
+  padding: 3em 6em;
+  font-family: Open Sans, sans-serif;
+  font-size:25px;
+}
+
+article {
+  width: 24em;
+}
+article + article {
+	margin-top: 4em;
+}
+section {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.5em;
+  position: relative;
+  border: 1px dashed;
+  padding: 10px;
+  background: #EEE;
+  width: 27em; height: 11em;
+}
+section > span {
+  border: 1px solid;
+  margin-block: 0.25em;
+  margin-inline: 0.25em;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+section > div {
+  position: absolute; top: -1.2em; left: -5em;
+	display: flex; justify-content: space-between;
+}
+section > div span {
+  margin: 0 0.33em;
+}
+section > div.cross {
+	flex-direction: row-reverse;
+	color: red;
+	right: -1px;
+	left: -5.5em;
+	padding-bottom: 1.1em;
+	background: url(i/arrow-left.svg) 0 50% / 0.33em 0.75em no-repeat,
+		linear-gradient(to left,red,red)  50% 50% / 100% 3px no-repeat,
+		linear-gradient(to left,red,red)  100% 50% / 3px 2ch no-repeat;
+}
+section > div.cross .end {
+  margin-left: 0.5em;
+  translate: 0 1.25em;
+}
+section > div.main {
+	flex-direction: column-reverse;
+	color: blue;
+	top: -2.4em;
+	bottom: -1px;
+	width: 10em;
+	align-items: flex-start;
+	background: url(i/arrow-down.svg) 50% 100% / 0.75em 0.33em no-repeat,
+		linear-gradient(to top,blue,blue)  50% 50% / 3px 100% no-repeat,
+		linear-gradient(to top,blue,blue)  50% 0% / 2ch 3px no-repeat;
+} 
+section[style*="column-reverse"] > div.main {
+	background: url(i/arrow-up.svg) 50% 0 / 0.75em 0.33em no-repeat,
+		linear-gradient(to top,blue,blue)  50% 50% / 3px 100% no-repeat,
+		linear-gradient(to top,blue,blue)  50% 100% / 2ch 3px no-repeat;
+}
+section > div.main .end {
+  align-self: flex-end; margin-top: 0.5em;
+}
+.start, .end {
+	font: 1em Helvetica, sans-serif;
+}
+section > div.lines {
+	color: green;
+	flex-direction: row-reverse;
+	gap: 1px;
+	top: 0;
+	left: auto;
+	right: 0.25em;
+	height: 100%;
+	align-items: stretch;
+}
+section > div.lines span {
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	margin: 0;
+	padding-inline: 6px;
+	padding-block: 0.25em;
+	border-inline: 2px dashed;
+	font-size: 1rem;
+	background: url(i/arrow-left-green.svg), url(i/arrow-right-green.svg), linear-gradient(green, green);
+	background-repeat: no-repeat;
+	background-size: 7px 11px, 7px 11px, 100% 2px;
+	background-position: 0 calc(100% - 0.25em - 5px), 100% calc(100% - 0.25em - 5px), 50% calc(100% - 0.85em);
+}
+section > div.lines span b {
+	background: #EEE;
+	padding-inline: 0.25ch;
+}
+section[style*="column-reverse"] > div.lines span {
+	align-items: start;
+	background-position: 0 calc(1em - 5px), 100% calc(1em - 5px), 50% 1em;
+}
+
+section > div.lines span:nth-of-type(1) {width: 120px;}
+section > div.lines span:nth-of-type(2) {width: 108px;}
+section > div.lines span:nth-of-type(3) {width: 108px;}
+section > div.lines span:nth-of-type(4) {width: 92px;}
+section > div.lines span:nth-of-type(5) {width: 70px;}
+
+section + p {
+  margin-top: 0.25em;
+  font-family: Consolas, monospace;
+}
+</style>
+</head>
+<body>
+
+<article>
+<section style="flex-flow: wrap-reverse column">
+  <span>A</span>
+  <span>Banana</span>
+  <span>CCC</span>
+  <span>DDDD</span>
+  <span>EEE<br>EE</span>
+  <span>FFF<br>FFF</span>
+  <span>GGGG<br>GGGG</span>
+  <span>HHH<br>HHH<br>HHH</span>
+  <span>IIIII<br>IIIII</span>
+  <span>JJJJJ<br>JJJ<br>JJJJJ</span>
+<div class="main">
+<span class="start">Main-end</span>
+<span class="end">Main-start</span>
+</div>
+<div class="cross">
+<span class="start">Cross-start</span>
+<span class="end">Cross-end</span>
+</div>
+<div class="lines">
+<span><b>Line #1</b></span>
+<span><b>Line #2</b></span>
+<span><b>Line #3</b></span>
+<span><b>Line #4</b></span>
+<span><b>Line #5</b></span>
+</div>
+</section>
+<p>flex-row: wrap-reverse column</p>
+</article>
+
+<article>
+<section style="flex-flow: wrap-reverse column-reverse">
+  <span>A</span>
+  <span>Banana</span>
+  <span>CCC</span>
+  <span>DDDD</span>
+  <span>EEE<br>EE</span>
+  <span>FFF<br>FFF</span>
+  <span>GGGG<br>GGGG</span>
+  <span>HHH<br>HHH<br>HHH</span>
+  <span>IIIII<br>IIIII</span>
+  <span>JJJJJ<br>JJJ<br>JJJJJ</span>
+<div class="main">
+<span class="start">Main-start</span>
+<span class="end">Main-end</span>
+</div>
+<div class="cross">
+<span class="start">Cross-start</span>
+<span class="end">Cross-end</span>
+</div>
+<div class="lines">
+<span><b>120 px</b></span>
+<span><b>108 px</b></span>
+<span><b>108 px</b></span>
+<span><b>92 px</b></span>
+<span><b>70 px</b></span>
+</div>
+</section>
+<p>flex-row: wrap-reverse column-reverse</p>
+</article>
+
+</body>
+</html>

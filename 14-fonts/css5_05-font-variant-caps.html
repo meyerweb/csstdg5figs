@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Chapter 5 Figures</title>
+<link rel="stylesheet" text="text/css" href="c/base.css">
+<style type="text/css">
+body {
+	width: min-content;
+	display: grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: repeat(2,auto);
+	grid-auto-flow: column;
+	gap: 0 1.5em;
+	justify-content: space-between;
+	padding: 1em; padding-block-end: 0; font-size: 1.5em; line-height: 1.2;
+	font-family: "EB Garamond Var", Literata, Helvetica;
+}
+p {width: 8em;}
+p::before {content: attr(data-type); font-variant-caps: normal; font: 1em Consolas, monospace; display: block; text-align: center; padding-block-end: 0.25em; margin-block-end: 0.5em; border-bottom: 1px solid gray; font-size: 1rem;}
+.variant1 {font-variant-caps: small-caps;}
+.variant2 {font-variant-caps: all-small-caps;}
+.variant3 {font-variant-caps: petite-caps;}
+.variant4 {font-variant-caps: all-petite-caps;}
+.variant5 {font-variant-caps: titling-caps;}
+.variant6 {font-variant-caps: unicase;}
+</style>
+</head>
+<body>
+
+<p class="variant1" data-type="small-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant2" data-type="all-small-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant3" data-type="petite-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant4" data-type="all-petite-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant5" data-type="titling-caps">Sphinx of Black Quartz, HEAR my Vow.</p>
+<p class="variant6" data-type="unicase">Sphinx of Black Quartz, HEAR my Vow.</p>
+
+
+</body>
+</html>

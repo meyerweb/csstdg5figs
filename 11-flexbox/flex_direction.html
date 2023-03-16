@@ -6,9 +6,16 @@
   
 <link rel="stylesheet" href="c/examples.css">  
 <style>
-  body {
-  padding: 100px;
-} div {
+body {
+  font-size: 25px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 0 3em;
+}
+div {
   background-color: rgba(0 0 0 / 0.1);
 }
 article > div {
@@ -20,7 +27,7 @@ div > div {
   border: 1px solid;
   height: 50px;
   padding: 0 10px;
-  margin: 10px;
+  margin: 5px;
   line-height: 50px;
   flex: 1 1 auto;
 }
@@ -43,6 +50,13 @@ div > div:nth-of-type(4) {
 div > div:nth-of-type(5) {
   background-color: rgba(0 0 0 / 0.5);
 }
+article:nth-of-type(1) {grid-row: 1; grid-column: 1; align-self: end;}
+article:nth-of-type(2) {grid-row: 2; grid-column: 1; align-self: start;}
+article:nth-of-type(3) {grid-row: 1/-1; grid-column: 2;}
+article:nth-of-type(4) {grid-row: 1/-1; grid-column: 3;}
+
+
+
 </style>
 </head>
 <body>
@@ -54,7 +68,7 @@ div > div:nth-of-type(5) {
     <div>4</div>
     <div>5</div>
   </div>
-  <p>flex-direction: row; ⤴ </p>
+  <p>row</p>
 </article>
 
 <article>
@@ -65,10 +79,10 @@ div > div:nth-of-type(5) {
     <div>4</div>
     <div>5</div>
   </div>
-  <p>flex-direction: row-reverse; ⤴ </p>
+  <p>row-reverse</p>
 </article>
 
-<article style="width: 45%; float: left">
+<article>
   <div style="flex-direction: column;">
     <div>1</div>
     <div>2</div>
@@ -76,10 +90,10 @@ div > div:nth-of-type(5) {
     <div>4</div>
     <div>5</div>
   </div>
-  <p>flex-direction: column; ⤴ </p>
+  <p>column</p>
 </article>
 
-<article style="width: 45%; float: right">
+<article>
   <div style="flex-direction:  column-reverse;">
     <div>1</div>
     <div>2</div>
@@ -87,7 +101,7 @@ div > div:nth-of-type(5) {
     <div>4</div>
     <div>5</div>
   </div>
-  <p>flex-direction: column-reverse; ⤴ </p>
+  <p>column-reverse</p>
 </article>
 </body>
 </html>

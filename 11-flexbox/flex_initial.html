@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="c/examples.css"/>
 <style contenteditable>
 body {
-  padding: 2em 100px;
+  padding: 0;
   text-align: center;
 }
 div {
@@ -45,9 +45,12 @@ article.flex3 > div > div {
   flex: 3;
 }
 p {
-  margin-top: 0; 
+  margin-top: 0.25em; 
   text-align: left; 
-  padding-left: 100px;
+  padding-left: 5px;
+}
+p em {
+	font-family: sans-serif;
 }
 section {
   margin-bottom: 150px;
@@ -71,7 +74,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: initial; ⤴</p>
+  <p>flex: initial;</p>
 </article>
 
 <article class="initial">
@@ -86,7 +89,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-<p>flex: initial; ⤴</p>
+<p>flex: initial;</p>
 </article>
 
 <article class="initial hundred">
@@ -101,7 +104,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: initial; width: 50px; ⤴</p>
+  <p>flex: initial; width: 50px;</p>
 </article>
 
 <article class="initial hundred">
@@ -116,7 +119,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: initial;  width: 50px; ⤴</p>
+  <p>flex: initial;  width: 50px;</p>
 </article>
 
 </section>
@@ -135,7 +138,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: auto; ⤴</p>
+  <p>flex: auto;</p>
 </article>
 
 <article class=auto>
@@ -150,7 +153,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: auto; ⤴</p>
+  <p>flex: auto;</p>
 </article>
 
 <article class="auto hundred">
@@ -165,7 +168,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: auto;  width: 50px; ⤴</p>
+  <p>flex: auto;  width: 50px;</p>
 </article>
 
 <article class="auto hundred">
@@ -180,7 +183,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: auto;  width: 50px;  ⤴</p>
+  <p>flex: auto;  width: 50px; </p>
 </article>
 
 </section>
@@ -199,7 +202,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: none; ⤴</p>
+  <p>flex: none;</p>
 </article>
 
 <article class=none>
@@ -214,7 +217,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: none; ⤴</p>
+  <p>flex: none;</p>
 </article>
 
 <article class="none hundred">
@@ -229,7 +232,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: none;  width: 50px; ⤴</p>
+  <p>flex: none;  width: 50px;</p>
 </article>
 
 <article class="none hundred">
@@ -244,7 +247,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: none;  width: 50px; ⤴</p>
+  <p>flex: none;  width: 50px;</p>
 </article>
 
 </section>
@@ -263,7 +266,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: 3; ⤴</p>
+  <p>flex: 3;</p>
 </article>
 
 <article class="flex3">
@@ -278,7 +281,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: 3; ⤴</p>
+  <p>flex: 3;</p>
 </article>
 
 <article>
@@ -290,7 +293,7 @@ section {
     <div style="flex: 4">flex: 4</div>
     <div style="flex: 5">flex: 5</div>
   </div>
-  <p>flex: 0 - 5; ⤴</p>
+  <p><em>flex values 0 - 5</em></p>
 </article>
 
 <article></article>
@@ -304,7 +307,7 @@ section {
     <div style="flex: 4"></div>
     <div style="flex: 5"></div>
   </div>
-  <p>flex: 0 - 5; ⤴</p>
+  <p><em>flex values 0 - 5</em></p>
 </article>
 
 <article>
@@ -316,7 +319,7 @@ section {
     <div style="flex: 4">flex: 4</div>
     <div style="flex: 5">flex: 5</div>
   </div>
-  <p>flex: 0 - 5; ⤴</p>
+  <p><em>flex values 0 - 5</em></p>
 </article>
 
 </section>
@@ -335,7 +338,7 @@ section {
     <div>H H</div>
     <div>I</div>
   </div>
-  <p>flex: 3;   width: 50px; ⤴</p>
+  <p>flex: 3;   width: 50px;</p>
 </article>
 
 <article class="flex3 hundred">
@@ -362,7 +365,7 @@ section {
     <div style="flex: 4">flex: 4</div>
     <div style="flex: 5">flex: 5</div>
   </div>
-  <p>flex: 0 - 5;   width: 50px; ⤴</p>
+  <p>flex: 0 - 5;   width: 50px;</p>
 </article>
 
 <article></article>
@@ -376,7 +379,7 @@ section {
     <div style="flex: 4"></div>
     <div style="flex: 5"></div>
   </div>
-  <p>flex: 0 - 5;  width: 50px; ⤴</p>
+  <p>flex: 0 - 5;  width: 50px;</p>
 </article>
 
 <article class="hundred">
@@ -388,7 +391,7 @@ section {
     <div style="flex: 4">flex: 4</div>
     <div style="flex: 5">flex: 5</div>
   </div>
-  <p>flex: 0 - 5;  width: 50px; ⤴</p>
+  <p>flex: 0 - 5;  width: 50px;</p>
 </article>
 
 </section>

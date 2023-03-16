@@ -47,6 +47,7 @@ section > div.cross {
 }
 section > div.cross .end {
   margin-left: 0.5em;
+  translate: 0 1.25em;
 }
 section > div.main {
 	flex-direction: column-reverse;
@@ -60,7 +61,10 @@ section > div.main {
 		linear-gradient(to top,blue,blue)  50% 100% / 2ch 3px no-repeat;
 }
 section > div.main .end {
-  align-self: flex-end; margin-top: 1.2em;
+  align-self: flex-end; margin-top: 0.5em;
+}
+.start, .end {
+	font: 1em Helvetica, sans-serif;
 }
 
 section + p {
@@ -82,15 +86,15 @@ section + p {
   <span>IIIII<br>IIIII</span>
   <span>JJJJ<br>JJJ<br>JJJJ</span>
 <div class="main">
-<span class="start">main-start</span>
-<span class="end">main-end</span>
+<span class="start">Main-start</span>
+<span class="end">Main-end</span>
 </div>
 <div class="cross">
-<span class="start">cross-start</span>
-<span class="end">cross-end</span>
+<span class="start">Cross-start</span>
+<span class="end">Cross-end</span>
 </div>
 </section>
-<p>flex-row: column-reverse wrap-reverse; ⤴</p>
+<p>flex-row: column-reverse wrap-reverse</p>
 </article>
 
 </body>

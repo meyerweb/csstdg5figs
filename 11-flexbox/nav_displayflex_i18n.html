@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="c/examples.css"/>
   <style>
 body {
-  padding: 100px;
+	padding: 0;
 }
 nav {
   display: flex;
@@ -20,9 +20,9 @@ nav:nth-of-type(2){
 justify-content: flex-end;
 }
 article {
-  padding: 20px;
+  padding: 5px 20px;
   border: dashed #aaa 1px;
-  margin: 20px;
+  margin-block: 0 20px;
 
 }
 a {
@@ -40,6 +40,7 @@ a:hover {
 }
 pre {
   direction: ltr;
+  margin-block: 0.4em 1em;
 }
 </style>
 </head>
@@ -52,7 +53,7 @@ pre {
     <a href="#4">Careers</a>
     <a href="#5">Contact Us</a>
   </nav>
-  <pre>justify-content: flex-start; ⤴</pre>
+  <pre>justify-content: flex-start</pre>
   <nav>
     <a href="#1">Home</a>
     <a href="#2">About</a>
@@ -60,7 +61,7 @@ pre {
     <a href="#4">Careers</a>
     <a href="#5">Contact Us</a>
   </nav>
-  <pre>justify-content: flex-end; ⤴</pre>
+  <pre>justify-content: flex-end</pre>
 </article>
 
 
@@ -74,7 +75,7 @@ pre {
     <a href="#4">קריירה</a>
     <a href="#5">איש קשר</a>
   </nav>
-  <pre>justify-content: flex-start; ⤴</pre>
+  <pre>justify-content: flex-start</pre>
 
   <nav>
     <a href="#1">דף הבית</a>
@@ -84,7 +85,7 @@ pre {
     <a href="#5">איש קשר</a>
   </nav>
 
-  <pre>justify-content: flex-end; ⤴</pre>
+  <pre>justify-content: flex-end</pre>
 </article>
 </body>
 </html>

@@ -4,20 +4,35 @@
 <meta charset="utf-8" />
 <title>Figure</title>
 <style type="text/css">
-.arena p {display: inline-block; height: 3em; width: 3em;
-	font-size: 3em; margin: 0 1ch 0 0;
-	overflow: hidden;}
+body {max-width: max-content;}
+.arena {counter-reset: numeric;}
+.arena p {position: relative; display: inline-block;
+	height: 3.5em; width: 3.5em;
+	font-size: 3em; margin: 1em 1ch 0 0;
+	overflow: hidden;
+	counter-increment: numeric;}
+.arena p::before {content: "#" counter(numeric);
+	position: absolute; bottom: 0; left: 0;
+	display: flex;
+	width: 90%;
+	height: 1.25em;
+	line-height: 1.25em;
+	font-size: 80%;
+	font-family: Noah, sans-serif;
+	background: #FFF; color: #468;}
 </style>
 <style type="text/css">
-b {display: block; height: 5em; width: 5em;
+b {display: block; height: 3em; width: 3em;
 	border: 1em solid;
-	border-radius: 2em;}
+	border-top-left-radius: 2em;
+	border-bottom-width: 0;
+	border-right-width: 0;}
 .p02 b {border-top-width: 0.5em;}
 .p03 b {border-top-style: double;}
 .p04 b {border-top-style: double; border-top-width: 0.5em;}
 .p05 b {border-color: red tan;}
 .p06 b {border-top-style: double; border-top-width: 0.5em; border-color: red tan;}
-.p07 b {border-width: 2em; border-color: red tan;}
+.p07 b {border-width: 2em 0 0 2em; border-color: red tan;}
 </style>
 </head>
 <body>
