@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+.arena {display: flex; align-items: start;}
+body {width: auto; font: 1.25em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+[id^="cb"] {margin: 4em 0.25em 0; position: relative;}
+[id^="cb"] p {background: silver;}
+[id^="cb"] code {font-size: 95%;}
+</style>
+<style type="text/css">
+[id^="cb"] {border: 1px solid;}  /* "cb" for "containing block" */
+p {width: 25ch;}
+#cb1 {writing-mode: horizontal-tb;}
+#cb2 {writing-mode: vertical-rl;}
+#cb3 {writing-mode: vertical-lr;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<div id="cb1"><p>This is a paragraph with some text.  Its width (<em>not</em> inline-axis) has been set to <code>25ch</code>.</em></p></div>
+<div id="cb2"><p>This is a paragraph with some text.  Its width (<em>not</em> inline-axis) has been set to <code>25ch</code>.</em></p></div>
+<div id="cb3"><p>This is a paragraph with some text.  Its width (<em>not</em> inline-axis) has been set to <code>25ch</code>.</em></p></div>
+</main>
+
+</body>
+</html>

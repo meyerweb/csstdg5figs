@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 7-40</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="c/base.css">
+<style type="text/css">
+body {width: 45em;}
+.arena {display: flex; justify-content: space-between;}
+p {line-height: 1.1; width: 47%;}
+p span {background: #FAA;}
+.overlaps span {padding-block-start: 10px; padding-block-end: 10px;}
+.endcaps span {padding: 0 2em; margin: 0 -1em;}
+</style>
+</head>
+<body>
+
+<main class="arena">
+
+<p class="endcaps">
+The text in this paragraph contains a <code>span</code> element that has been given <span>inline-start and inline-end padding and negative inline-start and -end margins, plus a background, which causes some interesting effects</span>.  The extra space you see at the beginning and end of the <code>span</code> and the observed overlap of other content are to be expected.
+</p>
+<p class="overlaps">
+The text in this paragraph contains a <code>span</code> element that has been given <span>block-start and block-end padding, plus a background, which causes some interesting effects</span>.  The extra space you see above and below the <code>span</code> and the observed overlap of other content are to be expected.
+</p>
+
+</main>
+
+</body>
+</html>

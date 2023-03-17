@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+body {font: italic 1em Helvetica, sans-serif; display: flex; align-items: start;}
+section {max-width: 30%; margin: 1em; padding-block: 3em; padding-inline: 3em; border: 1px solid; position: relative;}
+section.brtl {writing-mode: vertical-rl;}
+section p {padding: 0.5em; border: 1px solid; opacity: 0.6; margin-block: 1.5em; white-space: pre-wrap;}
+section::before, section::after { writing-mode: horizontal-tb;
+	position: absolute;
+	display: block;
+	padding-block: 1em;
+	padding-inline: 1em 0;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.33em;
+	padding-inline-end: 2em;
+	}
+section::before {content: "block axis"; writing-mode: vertical-rl;
+	top: 0; bottom: 0; left: calc(50% - 1.75em);
+	z-index: 1;
+	background:
+		url(i/arrowhead-down.svg) 50% 100% / 100% auto no-repeat,
+		linear-gradient(180deg,white,gray 80%,black 95%) 50% 0% / 1.5em calc(100% - 1em) no-repeat
+		;
+	opacity: 0.75;
+}
+section::after {content: "inline axis";
+	left: 0; right: 0; top: 7em;
+	z-index: 2;
+	background:
+		url(i/arrowhead-right.svg) 100% 50% / auto 100% no-repeat,
+		linear-gradient(90deg,white,gray 70%,black) 0% 50% / calc(100% - 1em) 1.5em no-repeat
+		;
+	font-style: italic;
+}
+section.irtl::after, section.ittb::after {content: "inline axis";
+	left: 0; right: 0;
+	direction: rtl;
+	background:
+		url(i/arrowhead-left.svg) 0% 50% / auto 100% no-repeat,
+		linear-gradient(270deg,white,gray 70%,black) 100% 50% / calc(100% - 1em) 1.5em no-repeat
+		;
+}
+
+section.ittb::before {content: "inline axis"; left: calc(50% - 3em); opacity: 1; z-index: 5;
+	font-style: italic;}
+section.ittb::after {content: "block axis"; top: calc(50% - 2.5em); opacity: 0.75; font-style: normal;}
+section.irtl p {direction: rtl;}
+section p + p {font-style: normal;}
+</style>
+</head>
+<body>
+
+<section class="bttb iltr">
+
+<p>Top-to-bottom          left-to-right text</p>
+<p><i>Examples:</i> English, Français, 
+
+
+
+Deutsch, Español, украї́нська</p>
+
+</section>
+
+<section class="bttb irtl">
+
+<p>Top-to-bottom          right-to-left text</p>
+<p><i>Examples:</i> اَلْعَرَبِيَّةُ, עִבְרִית
+
+
+
+پښتو, सिंधी,  اُردُو</p>
+
+</section>
+
+<section class="brtl ittb">
+
+<p>Right-to-left          top-to-bottom text</p>
+<p><i>Examples:</i> 汉语, 日本語
+
+
+
+한국어, 𡨸喃</p>
+
+</section>
+
+</body>
+</html>

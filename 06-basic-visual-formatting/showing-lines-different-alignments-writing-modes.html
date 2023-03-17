@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>Figure 7-29</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="c/base.css">
+<style type="text/css">
+body {width: 65em;}
+.arena {display: flex; justify-content: space-between;}
+div.hor {width: 33em;}
+div.ver {writing-mode: vertical-rl; height: 22em; margin-top: 1em;}
+p {border: 1px dashed gray;}
+.cl1 {text-align: left;}
+.cl2 {text-align: right;}
+.cl3 {text-align: center;}
+.cl4 {text-align: justify;}
+span {background: #DDC;}
+</style>
+</head>
+<body>
+
+<main class="arena">
+
+<div class="hor">
+
+<p class="cl1">
+<span>This paragraph assumes the style <code>text-align: left;</code>, which causes the line boxes within the element to line up along the left inner content edge of the paragraph.</span>
+</p>
+
+<p class="cl2">
+<span>This paragraph assumes the style <code>text-align: right;</code>, which causes the line boxes within the element to line up along the right inner content edge of the paragraph.</span>
+</p>
+
+<p class="cl3">
+<span>This paragraph assumes the style <code>text-align: center;</code>, which causes the line boxes within the element to line up their centers with the center of the content area of the paragraph.</span>
+</p>
+
+<p class="cl4">
+<span>This paragraph assumes the style <code>text-align: justify;</code>, which causes the line boxes within the element to align their inline-start and inline-end edges to the inline-start and -end inner content edges of the paragraph.  The exception is the last line box, whose inline-end edge does not align with the inline-end content edge of the paragraph.</span>
+</p>
+
+</div>
+
+<div class="ver">
+
+<p class="cl1">
+<span>This paragraph assumes the style <code>text-align: left;</code>, which causes the line boxes within the element to line up along the left inner content edge of the paragraph.</span>
+</p>
+
+<p class="cl2">
+<span>This paragraph assumes the style <code>text-align: right;</code>, which causes the line boxes within the element to line up along the right inner content edge of the paragraph.</span>
+</p>
+
+<p class="cl3">
+<span>This paragraph assumes the style <code>text-align: center;</code>, which causes the line boxes within the element to line up their centers with the center of the content area of the paragraph.</span>
+</p>
+
+<p class="cl4">
+<span>This paragraph assumes the style <code>text-align: justify;</code>, which causes the line boxes within the element to align their inline-start and inline-end edges to the inline-start and -end inner content edges of the paragraph.  The exception is the last line box, whose inline-end edge does not align with the inline-end content edge of the paragraph.</span>
+</p>
+
+</div>
+
+</main>
+
+</body>
+</html>

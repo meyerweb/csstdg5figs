@@ -134,3 +134,9 @@ footer > *:nth-child(2) {text-align: right;}
 
 	}
 }
+
+a[href="#"] {
+	background-color: #F005;
+	color: inherit;
+	text-decoration: none;
+}

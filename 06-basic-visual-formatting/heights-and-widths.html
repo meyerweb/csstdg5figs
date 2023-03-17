@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+body {width: auto; font: 1em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+.arena {display: flex; flex-wrap: wrap; align-items: start;}
+[id^="cb"]::before {content: "#" attr(id); display: block; text-align: center; padding: 0.5em; font: 1.5em Consolas, monospace; position: absolute; top: -1.75em; width: 100%;}
+[id^="cb"] {margin: 5em 0.25em 0; position: relative; max-width: 400px;}
+[id^="cb"] p {background: silver;}
+[id^="cb"] em {white-space: pre; font-size: 95%;}
+</style>
+<style type="text/css">
+[id^="cb"] {border: 1px solid;}  /* "cb" for "containing block" */
+#cb1 {width: auto;}    #cb1 p {width: auto;}
+#cb2 {width: 400px;}   #cb2 p {width: 300px;}
+#cb3 {width: 400px;}   #cb3 p {width: 50%;}
+
+#cb4 {height: auto;}   #cb4 p {height: 50%;}
+#cb5 {height: 300px;}  #cb5 p {height: 200px;}
+#cb6 {height: 300px;}  #cb6 p {height: 50%;}
+</style>
+</head>
+<body>
+
+<main class="arena">
+
+<div id="cb1"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: width auto, P: width auto)</em></p></div>
+<div id="cb2"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: width 400px, P: width 300px)</em></p></div>
+<div id="cb3"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: width 400px, P: width 50%)</em></p></div>
+<div id="cb4"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: height auto, P: height 50%)</em></p></div>
+<div id="cb5"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: height 300px, P: height 200px)</em></p></div>
+<div id="cb6"><p>This is a paragraph with some text that will wrap to multiple lines if given half a chance.  The paragraph also determines the width and height of the element if it isn’t otherwise set. <em>(CB: height 300px, P: height 50%)</em></p></div>
+
+</main>
+
+</body>
+</html>

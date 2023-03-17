@@ -6,6 +6,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="base.css">
 <style type="text/css">
+body {max-width: 40em;}
 ul {border: 1px solid gray; margin: 1em;}
 li {border: 1px dotted gray; margin: 5px 0;}
 #two {list-style-position: inside;}
@@ -14,13 +15,13 @@ li {border: 1px dotted gray; margin: 5px 0;}
 <body>
 
 <ul id="one">
-<li>A list item.</li>
+<li>A list item. The list items in this list have outside markers, which means the markers are set a certain distance from each list item’s element box.</li>
 <li>Another list item.</li>
 <li>A third list item.</li>
 </ul>
 
 <ul id="two">
-<li>A list item.</li>
+<li>A list item. The list items in this list have inside markers, which means the markers are placed inside each list item’s element box as if it were an inline element.</li>
 <li>Another list item.</li>
 <li>A third list item.</li>
 </ul>

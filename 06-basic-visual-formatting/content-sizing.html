@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+.arena {display: flex; align-items: start; width: min-content;}
+body {width: auto; font: 1.25em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+[id^="cb"]::before {content: "#" attr(id); display: block; text-align: center; padding: 0.5em 0; font: 1.5em Consolas, monospace; position: absolute; top: -1.75em; width: 100%;}
+[id^="cb"] {margin: 4em 0.25em 0; position: relative;}
+[id^="cb"] p {background: silver;}
+[id^="cb"] code {font-size: 95%;}
+</style>
+<style type="text/css">
+[id^="cb"] {border: 1px solid;}  /* "cb" for "containing block" */
+#cb1 p {width: max-content;}
+#cb2 p {width: min-content;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<div id="cb1"><p>This is a paragraph with some text.  Its width has been set to <code>max-content</code>.</em></p></div>
+<div id="cb2"><p>This is a paragraph with some text.  Its width has been set to <code>min-content</code>.</em></p></div>
+</main>
+
+</body>
+</html>
