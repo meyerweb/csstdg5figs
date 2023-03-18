@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="code">
+<head style="display: block;">
+  <meta charset="utf-8"/>
+  <title>Justify-content</title> 
+  <link rel="stylesheet" href="estelle/examples.css"/>
+<style>
+body {
+  max-width: 40em;
+  font-size: 25px;
+  text-align: center;
+  padding: 0.5em 2.5em;
+}
+div {
+  background-color: rgba(0,0,0,0.1);
+  font-family: Consolas, monospace;
+}
+p {
+	position: absolute;
+	bottom: -0.5em;
+	right: -2em;
+	margin-block: 0;
+	padding: 0.25em 0.5em;
+	background: #FED;
+	border: 1px solid rgba(0,0,0,0.1);
+	font-style: italic;
+}
+.gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-block: 0 1.5em;
+}
+.gallery:nth-of-type(1) {gap: 25px 5px;}
+.gallery:nth-of-type(2) {gap: 5px 25px;}
+.gallery:nth-of-type(3) {gap: 5px;}
+.gallery div {
+  border: 1px solid;
+  padding: 5px;
+  height: 50px;
+  line-height: 50px;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+  <div>HHHHHHHH</div>
+  <div>GGGGGGG</div>
+  <div>FFFFFF</div>
+  <div>EEEEE</div>
+  <div>DDDD</div>
+  <div>CCC</div>
+  <div>BB</div>
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+<p><code>gap: 15px 5px</code></p>
+</div>
+
+<div class="gallery">
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+  <div>HHHHHHHH</div>
+  <div>GGGGGGG</div>
+  <div>FFFFFF</div>
+  <div>EEEEE</div>
+  <div>DDDD</div>
+  <div>CCC</div>
+  <div>BB</div>
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+<p><code>gap: 5px 15px</code></p>
+</div>
+
+<div class="gallery">
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+  <div>HHHHHHHH</div>
+  <div>GGGGGGG</div>
+  <div>FFFFFF</div>
+  <div>EEEEE</div>
+  <div>DDDD</div>
+  <div>CCC</div>
+  <div>BB</div>
+  <div>A</div>
+  <div>BB</div>
+  <div>CCC</div>
+  <div>DDDD</div>
+  <div>EEEEE</div>
+  <div>FFFFFF</div>
+  <div>GGGGGGG</div>
+  <div>HHHHHHHH</div>
+  <div>IIIIIIIII</div>
+<p><code>gap: 5px</code></p>
+</div>
+
+</body>
+</html>

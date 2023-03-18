@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+.arena section {display: flex; align-items: start; gap: 1em;}
+body {width: auto; font: 1.25em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+code {display: block; margin: 4em 0 0.5em; font-weight: 700; font-size: 1.5em; text-align: center;}
+[id^="cb"] {height: 11em; overflow: hidden;}
+[id^="cb"] div {flex-basis: min-content; flex-grow: 0; border: 1px solid; padding: 0.5em; background: #DDD;}
+[id="cb2"] div {flex-grow: 1;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<code>flex-basis: min-content; flex-grow: 0;</code>
+<section id="cb1">
+<div><p>This content is short.</p></div>
+<div><p>This content is a little longer.</p></div>
+<div><p>This content is longer, because there is more of it, which probably makes sense and seems obvious.</p></div>
+<div><p>This is a lot of content that will end up wrapping to multiple lines, because there is so darn much of it, just going on and on as if the author is being paid by the word.</p></div>
+</section>
+
+<code>flex-basis: min-content; flex-grow: 1;</code>
+<section id="cb2">
+<div><p>This content is short.</p></div>
+<div><p>This content is a little longer.</p></div>
+<div><p>This content is longer, because there is more of it, which probably makes sense and seems obvious.</p></div>
+<div><p>This is a lot of content that will end up wrapping to multiple lines, because there is so darn much of it, just going on and on as if the author is being paid by the word.</p></div>
+</section>
+
+</main>
+
+</body>
+</html>

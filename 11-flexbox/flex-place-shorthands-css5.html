@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+body {width: auto; font: 1em/1 Calibri, Arial, Helvetica, sans-serif;}
+.arena {display: flex; flex-wrap: wrap; gap: 2em; counter-reset: examples;}
+.arena div {position: relative; display: flex; flex-wrap: wrap; gap: 1em;
+	border: 1px solid; padding: 0.5em; background: #FEE; background-clip: content-box;
+	width: 25em; height: 20em;
+	counter-reset: items; counter-increment: examples;}
+html body .arena div::before {content: "#" counter(examples); position: absolute;
+	padding: 0.5em 1em; border: 1px solid; background: #FFC; color: gray;
+	font: italic 1em Georgia, serif;
+	place-self: end start;}
+.arena span {border: 1px solid; padding: 0.5em; background: #DDD; width: 5em;
+	counter-increment: items;}
+.arena span::after {content: " " counter(items);}
+.arena span:nth-child(odd) {height: 1em;}
+.arena span:nth-child(even) {height: 3em;}
+</style>
+<style type="text/css">
+.arena div:nth-child(1) {place-content: center;}
+.arena div:nth-child(2) {place-content: center end;}
+
+.arena div:nth-child(3) {place-items: start;}
+.arena div:nth-child(4) {place-items: start center;}
+
+.arena div:nth-child(5) span {place-self: end;}
+.arena div:nth-child(6) span {place-self: end center;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+<div>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+<span>Item</span>
+</div>
+
+</main>
+
+</body>
+</html>

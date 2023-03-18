@@ -8,249 +8,151 @@
 
   <style>
 body {
-  padding: 10px; 
+  padding: 3em 0; 
+  margin: 0;
   display: flex; 
-  justify-content: space-evenly; 
+  justify-content: center; 
   flex-flow: wrap;
-  font-size: 25px;
-  text-align: center;
+  gap: 7em 1em;
+  font-size: 1.5vw;
 }
 div {
   background-color: rgba(0,0,0,0.1);
 }
-article {
+figure {
   position: relative; 
-  display: flex; 
-  flex-direction: row-reverse;
+  width: calc(25% - 1em);
+  margin: 0;
 }
-article > p {
-  writing-mode: vertical-lr; 
-  width: 1.5em; 
-  margin: 120px 0;
+figure > figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 3px;
+  padding: 1em 2em;
+  top: calc(50% - 1.5em);
+  font: bold 70% monospace; 
+  background: hsl(0deg,0%,100%,0.97);
 }
-article > div {
-	position: relative;
+figure > div {
+position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
   border: 1px dashed;
-  height: 300px;
-  width: 350px;
-  margin: 100px 0 30px;
+  height: 7em;
 	background: #EEE;
+	padding-inline: 1em;
 }
 div > div {
   border: 1px solid;
   flex: 1 0 auto;
   background-color: rgb(208,208,208);
   letter-spacing: 2px;
-}
-.stretch {
-  flex: 0 1 0;
-}
-p {
-  margin: 0 -20px 40px;
-}
-.stretch {
-  align-self: stretch;
-  width: 1px; 
-  margin-left: -2px;
-  background-color: transparent;
-  border-color: transparent;
-}
-.stretch:before {
-  content: '';
-  position: absolute;
-  left: 0; right: 0;
-  border-top: 1px solid red;
-}
-.a, .f, .k {
-  margin-left: 20px;
-}
-.e, .j, .k {
-  margin-right: 20px;
-}
-.k {
-  flex: 0 1 2ch;
-}
-.e:after,
-.f:after,
-.k:after {
-  content: '';
-  left: 0; right: 0;
-  position: absolute;
-  border-top: transparent solid 1px;
-  border-bottom: 1px solid blue;
-  height: 1.2em;
-}
-div[style*=stretch] div:after {
-  content: none;
-}
-div[style*=stretch] .f:before,
-div[style*=stretch] .k:before,
-article:last-of-type p:before {
-  content: '';
-  left: 0; right: 0;
-  position: absolute;
-  border-bottom: 1px solid blue;
-  transform: translatey(-1px);
-}
-.stretch:last-of-type:before,
-article:last-of-type p:before {
-  transform: translatey(-2px);
+  text-align: center;
 }
 </style>
 </head>
 <body>
 
-<article>
+<figure>
 <div style="align-content: stretch;">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
   <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
 </div>
-<p>align-content: stretch; ⤴</p>
-</article>
+<figcaption>align-content: normal<br/>align-content: stretch</figcaption>
+</figure>
 
-
-
-
-<article>
-<div style="align-content: flex-start">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
-  <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
-</div>
-<p>align-content: flex-start ⤴</p>
-</article>
-
-<article>
-<div style="align-content: flex-end">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
-  <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
-</div>
-<p>align-content: flex-end ⤴</p>
-</article>
-
-<article>
+<figure>
 <div style="align-content: center">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
   <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
 </div>
-<p>align-content: center; ⤴</p>
-</article>
+<figcaption>align-content: center</figcaption>
+</figure>
 
-<article>
+<figure>
+<div style="align-content: flex-start">
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
+</div>
+<figcaption>align-content: start<br/>align-content: flex-start<br/>align-content: baseline</figcaption>
+</figure>
+
+<figure>
+<div style="align-content: flex-end">
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
+</div>
+<figcaption>align-content: end<br/>align-content: flex-end<br/>align-content: last baseline</figcaption>
+</figure>
+
+<figure>
 <div style="align-content: space-between;">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
   <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
 </div>
-<p>align-content:  space-between; ⤴</p>
-</article>
+<figcaption>align-content: space-between</figcaption>
+</figure>
 
-
-
-
-<article>
+<figure>
 <div style="align-content: space-around;">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
   <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
 </div>
-<p>align-content:  space-around; ⤴</p>
-</article>
+<figcaption>align-content: space-around</figcaption>
+</figure>
 
-
-
-
-<article>
+<figure>
 <div style="align-content: space-evenly;">
-  <div class="a">A</div>
-  <div class="b">BB<br/>BB</div>
+  <div class="a">A<br/>A<br/>A</div>
+  <div class="b">BB<br/>BB<br/>BB</div>
   <div class="c">CCC<br/>CCC<br/>CCC</div>
-  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
-  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
-  <div class="stretch"></div>
-  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
-  <div class="g">GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG<br/>GGGGG</div>
-  <div  class="h">HHHH<br/>HHHH<br/>HHHH<br/>HHHH</div>
-  <div class="i">III<br/>III<br/>III</div>
-  <div class="j">JJ<br/>JJ</div>
-  <div class="stretch"></div>
-  <div class="k">K</div>
-  <div class="stretch"></div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+  <div class="g">GGGGGGG<br/>GGGGGGG<br/>GGGGGGG</div>
+  <div class="h">HHHHHHHH<br/>HHHHHHHH<br/>HHHHHHHH</div>
 </div>
-<p>align-content:  space-evenly; ⤴</p>
-</article>
+<figcaption>align-content: space-evenly</figcaption>
+</figure>
+
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="code">
+<head>
+<meta charset="utf-8"/>
+<title>Justify-content</title>  
+<style>
+figure {
+  margin: 0 0 1em;
+  padding: 0;
+  text-align: center;
+  width: 66vw;
+  margin-inline: 0 auto;
+}
+figure > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.1);
+  border: 2px dashed;
+  padding: 0.5em 0.25em;
+}
+div > p {
+  display: inline-block;
+  min-width: 18%;
+  border: 1px solid black;
+  margin: 0.125em;
+  padding-block: 0.5em;
+  background-color: rgba(255,255,216,0.85);
+}
+figcaption {
+	font: bold 1.5em monospace;
+	white-space: pre;
+	margin-top: 0.5em;
+}
+
+figure:nth-of-type(3) > div { flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<figure>
+  <div>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+  </div>
+<figcaption></figcaption>
+</figure>
+
+<figure>
+  <div>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+    <p>E</p>
+    <p>F</p>
+    <p>G</p>
+    <p>H</p>
+  </div>
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  <div>
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+    <p>D</p>
+    <p>E</p>
+    <p>F</p>
+    <p>G</p>
+    <p>H</p>
+  </div>
+<figcaption>space-between</figcaption>
+</figure>
+
+</body>
+</html>

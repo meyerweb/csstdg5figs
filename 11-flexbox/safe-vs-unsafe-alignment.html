@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: align-content</title> 
+
+   <link rel="stylesheet" href="c/examples.css"/>
+
+  <style>
+body {
+  padding: 3em 0; 
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  flex-flow: wrap;
+  gap: 8em 1em;
+  font-size: 1.5vw;
+}
+div {
+  background-color: rgba(0,0,0,0.1);
+}
+figure {
+  position: relative; 
+  width: calc(33% - 1em);
+  margin: 0;
+}
+figure > figcaption {
+  position: absolute;
+  margin: 0.5em 3px;
+  padding-inline: 0 0.5em;
+  padding-block: 0.25em;
+  box-shadow: 0 0 0.25em 0.33em #FFFE;
+  bottom: 100%;
+  font: bold 100% monospace; 
+  text-align: center;
+  background: hsl(0deg,0%,100%,0.97);
+}
+figure > div {
+	position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 1px dashed;
+  height: 3em;
+  padding: 0.5em;
+	background: #EEE;
+	padding-inline: 1em;
+}
+div > div {
+  border: 1px solid;
+  flex: 1 0 auto;
+  background-color: rgb(208,208,208);
+  letter-spacing: 2px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<figure>
+<div style="align-items: center;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: center</figcaption>
+</figure>
+
+<figure>
+<div style="align-items: safe center;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: safe center</figcaption>
+</figure>
+
+<figure>
+<div style="align-items: unsafe center;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: unsafe center</figcaption>
+</figure>
+
+<figure>
+<div style="align-items: flex-end">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: flex-end</figcaption>
+</figure>
+
+<figure>
+<div style="align-items: safe flex-end">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: safe flex-end</figcaption>
+</figure>
+
+<figure>
+<div style="align-items: unsafe flex-end">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: unsafe flex-end</figcaption>
+</figure>
+
+<figure>
+  <div style="align-items: stretch;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: stretch</figcaption>
+</figure>
+
+<figure>
+  <div style="align-items: safe stretch;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: safe stretch</figcaption>
+</figure>
+
+<figure>
+  <div style="align-items: unsafe stretch;">
+  <div class="a">A</div>
+  <div class="b">BB<br/>BB</div>
+  <div class="c">CCC<br/>CCC<br/>CCC</div>
+  <div class="d">DDDD<br/>DDDD<br/>DDDD<br/>DDDD</div>
+  <div class="e">EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE<br/>EEEEE</div>
+  <div class="f">FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF<br/>FFFFFF</div>
+</div>
+<figcaption>align-items: unsafe stretch</figcaption>
+</figure>
+
+</body>
+</html>
