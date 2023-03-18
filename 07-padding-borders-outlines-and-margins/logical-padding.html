@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figure ?-??</title>
+<link rel="stylesheet" type="text/css" href="c/basic.css">
+<style type="text/css">
+.arena {display: flex; align-items: start;}
+body {width: auto; font: 1.25em/1.25 Calibri, Arial, Helvetica, sans-serif;}
+[id^="cb"] {margin: 1em; position: relative;}
+[id^="cb"] p {background: silver;}
+[id^="cb"] code {font-size: 95%;}
+</style>
+<style type="text/css">
+[id^="cb"] {border: 0 solid;}  /* "cb" for "containing block" */
+p { inline-size: 15ch; margin-block: 0;
+     padding-block-start: 0.25em;
+     padding-block-end: 0.25em;
+     padding-inline-start: 1em;
+     padding-inline-end: 1em;
+}
+#cb1 {writing-mode: horizontal-tb;}
+#cb1 p {inline-size: 35ch;}
+#cb2 {writing-mode: vertical-rl;}
+#cb3 {writing-mode: vertical-lr;}
+ </style>
+</head>
+<body>
+
+<main class="arena">
+
+<div id="cb1"><p>This is a paragraph with some text.  Its block-side paddings are each <code>0.25em</code>, and its inline-side paddings are <code>1em</code>.</p></div>
+<div id="cb2"><p>This is a paragraph with some text.  Its block-side paddings are each <code>0.25em</code>, and its inline-side paddings are <code>1em</code>.</p></div>
+</main>
+
+</body>
+</html>
