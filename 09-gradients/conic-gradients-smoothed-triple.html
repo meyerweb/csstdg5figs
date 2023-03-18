@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>A simple conic gradient</title>
+<style type="text/css">
+section {
+	display: flex;
+	font-size: 40px;
+}
+div {
+	flex-shrink: 0;
+	margin: 0 4em;
+     height: 10em;
+     width: 10em;
+     background: conic-gradient(green 35%, yellow 40% 60%, red 65%);
+}
+
+.annotated {
+	position: relative;
+}
+.annotated b {
+	position: absolute;
+	top: -21%;
+	left: 50%;
+	height: 71%;
+	width: 4px;
+	margin-left: -2px;
+	background: black;
+	background-clip: content-box;
+	transform-origin: 50% 100%;
+	z-index: -1;
+}
+
+b[data-angle^="126"] {transform: rotate(126deg);}
+b[data-angle^="144"] {transform: rotate(144deg);}
+b[data-angle^="216"] {transform: rotate(216deg);}
+b[data-angle^="234"] {transform: rotate(234deg);}
+
+b::before {
+	content: attr(data-angle) "deg";
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	font: 1em Consolas, monospace;
+}
+b[data-angle^="1"]::before {
+	transform: rotate(-90deg) translate(0,-50%);
+	transform-origin: 0 0;
+}
+b[data-angle^="2"]::before {
+	transform: rotate(90deg) translate(0,-50%);
+	transform-origin: 100% 0;
+	right: 0;
+}
+</style>
+</head>
+<body>
+
+<section>
+
+<div class="annotated">
+
+<b data-angle="126"></b>
+<b data-angle="144"></b>
+<b data-angle="216"></b>
+<b data-angle="234"></b>
+</div>
+
+</section>
+
+</body>
+</html>

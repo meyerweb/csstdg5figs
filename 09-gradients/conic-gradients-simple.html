@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>A simple conic gradient compared to linear</title>
+<style type="text/css">
+section {
+	padding-top: 3em;
+	display: flex;
+	width: 1000px;
+}
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div b {
+	mix-blend-mode: difference;
+}
+
+#ex01 {
+	height: 600px;
+	width: 600px;
+	background:
+		radial-gradient(transparent 121px, 122px, white 123px, white 128px, 129px, transparent 130px),
+		conic-gradient(black, gray, black, white, black, silver, gray);
+	background-blend-mode: difference, normal;
+	margin-right: 2em;
+	position: relative;
+}
+#ex02 {
+	height: 600px;
+	width: 200px;
+	background: linear-gradient(black, gray, black, white, black, silver, gray);
+}
+#ex01 {--offset: -125px;}
+
+#ex01 ol li {position: absolute; top: 50%; left: 50%; margin: -0.5em 0 0 -0.75em;}
+#ex01 ol li:nth-child(1) {transform: rotate(0deg)  translate(0,var(--offset)) rotate(-0deg); z-index: 1;}
+#ex01 ol li:nth-child(2) {transform: rotate(60deg)  translate(0,var(--offset)) rotate(-60deg);}
+#ex01 ol li:nth-child(3) {transform: rotate(120deg) translate(0,var(--offset)) rotate(-120deg);}
+#ex01 ol li:nth-child(4) {transform: rotate(180deg) translate(0,var(--offset)) rotate(-180deg);}
+#ex01 ol li:nth-child(5) {transform: rotate(240deg) translate(0,var(--offset)) rotate(-240deg);}
+#ex01 ol li:nth-child(6) {transform: rotate(300deg) translate(0,var(--offset)) rotate(-300deg);}
+#ex01 ol li:nth-child(7) {transform: rotate(360deg) translate(0,calc(var(--offset) + 1.1em)) rotate(-360deg);}
+
+ol {
+	list-style: none;
+	counter-reset: stops;
+	font-size: 2em;
+}
+
+section > ol {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: calc(600px + 1em);
+	margin: 0;
+	margin-top: -0.5em;
+	padding: 0;
+	font-family: Consolas;
+}
+section > ol li {
+	text-align: right;
+	transform: translate(0.75em, 0.125em);
+}
+ol li::after {
+	counter-increment: stops;
+	content: counter(stops);
+	font-weight: bold;
+	font-family: Arvo;
+	height: 1.5em;
+	width: 1.5em;
+	display: inline-flex;
+	margin: -0.67em 0;
+	justify-content: center;
+	align-items: center;
+	background: radial-gradient(circle at 50% 47.5%, white 50%, 52%, black, black 60%, 61%, transparent 63%);
+}
+#labels li::after {
+	margin-left: 0.25em;
+}
+</style>
+</head>
+<body>
+
+<section>
+
+<div id="ex01">
+<b>
+</b>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+
+<ol id="labels">
+<li>black</li>
+<li>gray</li>
+<li>black</li>
+<li>white</li>
+<li>black</li>
+<li>silver</li>
+<li>gray</li>
+</ol>
+
+<div id="ex02">
+</div>
+
+</section>
+
+</body>
+</html>

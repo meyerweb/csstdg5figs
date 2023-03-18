@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>A simple conic gradient</title>
+<style type="text/css">
+body {
+	display: flex;
+	}
+div {
+	font-size: 40px;
+	height: 10em;
+	width: 10em;
+	margin: 0.5em;
+}
+#ex01 {
+	background: repeating-conic-gradient(
+         #117 5deg, #ABE 15deg, #117 25deg
+         ) center no-repeat;
+}
+#ex02 {
+	background: repeating-conic-gradient(
+         #117 0 5deg, #ABE 0 15deg, #117 0 25deg
+         ) center no-repeat;
+}
+#ex03 {
+	background: repeating-conic-gradient(
+         #117 5deg, #ABE 15deg
+         ) center no-repeat;
+}
+
+</style>
+ </head>
+ <body>
+
+<div id="ex01"></div>
+<div id="ex02"></div>
+<div id="ex03"></div>
+
+</body>
+</html>
