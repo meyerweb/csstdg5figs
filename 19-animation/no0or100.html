@@ -13,6 +13,8 @@ div{
     border: 1px black solid;
  }
 </style>
+</head>
+<body>
 <style contenteditable id="editme">div {--bgcolor: red;
     animation: change_bgcolor infinite 10s alternate;
     background-color: var(--bgcolor);
@@ -28,8 +30,6 @@ div{
     }
 }
 </style>
-</head>
-<body>
 <div>This animation behaves as if was written:
 <pre> @keyframes change_bgcolor {
   0% { background-color: var(--bgcolor); border-width: 1px;}
