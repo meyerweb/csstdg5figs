@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Transitions</title>
+<style type="text/css">
+html {background: silver;}
+body {background: white; padding: 1em;}
+section {background: #EEE; padding: 0.5em;}
+div {background: #FAA; padding: 0.5em; width: 200px;}
+div:hover {width: 400px;}
+
+section:nth-of-type(1) div {transition: width 10s steps(10, jump-start);}
+section:nth-of-type(2) div {transition: width 10s linear;}
+</style>
+</head>
+<body>
+
+
+<section>
+	<div>step transition</div>
+</section>
+
+<section>
+	<div>linear animation</div>
+</section>
+
+
+
+</body>
+</html>

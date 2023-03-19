@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+<defs>
+<style type="text/css">
+svg {background: #EEE;
+	stroke: #000; stroke-width: 0.1; fill: none;}
+#timelines {stroke-width: 0.05;}
+#progressbars {stroke: none; fill: hsla(240deg,50%,50%,0.1);}
+#labels {stroke: none; fill: #000C; font: 5px Calibri;}
+</style>
+</defs>
+
+<path d="M 10,10 v 50 h 50"/>
+<g id="timelines">
+	<line x1="20" y1="10" x2="20" y2="60" />
+	<line x1="30" y1="10" x2="30" y2="60" />
+	<line x1="40" y1="10" x2="40" y2="60" />
+	<line x1="50" y1="10" x2="50" y2="60" />
+	<line x1="60" y1="10" x2="60" y2="60" />
+</g>
+<g id="progressbars">
+	<rect x="10" y="10" width="50" height="10" />
+	<rect x="10" y="30" width="50" height="10" />
+	<rect x="10" y="50" width="50" height="10" />
+</g>
+<g id="labels">
+	<text x="35" y="66" text-anchor="middle">Time</text>
+	<text x="6" y="35" text-anchor="middle" class="vertical" transform="rotate(-90,6,35)">Progress</text>
+</g>
+
+</svg>

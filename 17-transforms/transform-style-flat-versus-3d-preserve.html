@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 25</title>
+<style type="text/css">
+html {background: #DDD;}
+body {max-width: 40em; background: #FFF; display: flex;}
+figure {width: 48%;}
+figcaption {text-align: center; font-size: 1.5em; margin-inline-end: 1em;}
+div {border: 1px solid red; margin: 50px; background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box; transform-style: flat; perspective: 500px;}
+div.outer {transform: perspective(750px) rotateY(30deg) rotateX(-30deg);}
+div.inner {transform: perspective(250px) translateZ(60px) rotateX(45deg); background: #FFC;}
+div.outer.p3d { transform-style: preserve-3d;}
+code {display: inline-block; font: 1em Consolas; white-space: pre; tab-size: 2;}
+</style>
+</head>
+<body>
+<figure>
+	<div class="outer">
+	outer
+	<div class="inner">inner</div>
+	</div>
+	<figcaption><code>flat</code></figcaption>
+</figure>
+
+<figure>
+	<div class="outer p3d">
+	outer
+	<div class="inner">inner</div>
+	</div>
+	<figcaption><code>preserve-3d</code></figcaption>
+</figure>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Figure 11</title>
+<style type="text/css">
+body {display: grid; grid-template-columns: repeat(4, 1fr); gap: 75px; max-width: min-content; padding: 75px;}
+
+div {border: 1px solid red; position: relative;
+	background: url(i/frame-sq.png); background-size: 100% 100%; background-origin: border-box;}
+img {height: 150px; width: 150px; vertical-align: bottom; opacity: 0.9;}
+
+figure {margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;}
+figcaption {margin-block: 45px 0; white-space: pre; font: 24px Consolas, monospace; position: relative; z-index: 5;}
+
+	#ex01 {transform: scaleX(2);}
+	#ex02 {transform: scaleX(0.5);}
+	#ex03 {transform: scaleY(2);}
+	#ex04 {transform: scaleY(-0.5);}
+	#ex05 {transform: scale(1.5);}
+	#ex06 {transform: scale(1.5,-1.5);}
+	#ex07 {transform: scale(0.5,1.5);}
+	#ex08 {transform: scale(1.5,-0.5);}
+
+</style>
+</head>
+<body>
+
+<figure><div><img src="i/box.png" alt="" id="ex01"></div><figcaption>scaleX(2)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex02"></div><figcaption>scaleX(0.5)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex03"></div><figcaption>scaleY(2)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex04"></div><figcaption>scaleY(-0.5)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex05"></div><figcaption>scale(1.5)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex06"></div><figcaption>scale(1.5,1.5)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex07"></div><figcaption>scale(0.5,1.5)</figcaption></figure>
+<figure><div><img src="i/box.png" alt="" id="ex08"></div><figcaption>scale(1.5,-0.5)</figcaption></figure>
+
+</body>
+</html>
