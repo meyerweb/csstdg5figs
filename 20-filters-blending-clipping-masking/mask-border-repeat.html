@@ -18,17 +18,19 @@ p {
 	margin: 0 auto;
 	-webkit-mask-box-image-source: url(i/circles.png); 
 	-webkit-mask-box-image-slice: 33%;
+	mask-border-source: url(i/circles.png); 
+	mask-border-slice: 33%;
 }
 figure {margin: 0; padding: 0;}
 figcaption {font: 25px Consolas, monospace; text-align: center; border-bottom: 1px solid; width: 225px; margin: 0 auto 0.75em;}
-p.p1 {-webkit-mask-box-image-repeat: stretch;}
-p.p2 {-webkit-mask-box-image-repeat: repeat;}
-p.p3 {-webkit-mask-box-image-repeat: round;}
-p.p4 {-webkit-mask-box-image-repeat: space;}
-p.p6 {-webkit-mask-box-image-repeat: stretch space;}
-p.p7 {-webkit-mask-box-image-repeat: repeat round;}
-p.p8 {-webkit-mask-box-image-repeat: round space;}
-p.p5 {-webkit-mask-box-image-repeat: space stretch;}
+p.p1 {-webkit-mask-box-image-repeat: stretch; mask-border-repeat: stretch;}
+p.p2 {-webkit-mask-box-image-repeat: repeat; mask-border-repeat: repeat;}
+p.p3 {-webkit-mask-box-image-repeat: round; mask-border-repeat: round;}
+p.p4 {-webkit-mask-box-image-repeat: space; mask-border-repeat: space;}
+p.p6 {-webkit-mask-box-image-repeat: stretch space; mask-border-repeat: stretch space;}
+p.p7 {-webkit-mask-box-image-repeat: repeat round; mask-border-repeat: repeat round;}
+p.p8 {-webkit-mask-box-image-repeat: round space; mask-border-repeat: round space;}
+p.p5 {-webkit-mask-box-image-repeat: space stretch; mask-border-repeat: space stretch;}
 </style>
 </head>
 <body>

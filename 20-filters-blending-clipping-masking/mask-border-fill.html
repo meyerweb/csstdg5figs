@@ -17,8 +17,10 @@ p {
 	margin: 10px;
  
 }
-p.one {-webkit-mask-box-image-slice: 33% fill; -webkit-mask-box-image-source: url(i/circles-filled.svg);}
-p.two {-webkit-mask-box-image-slice: 33% fill;-webkit-mask-box-image-source: url(i/circles.svg);}
+p.one {-webkit-mask-box-image-slice: 33%; -webkit-mask-box-image-source: url(i/circles-filled.svg);
+	mask-border-slice: 33%; mask-border-source: url(i/circles-filled.svg);}
+p.two {-webkit-mask-box-image-slice: 33% fill; -webkit-mask-box-image-source: url(i/circles.svg);
+	mask-border-slice: 33% fill; mask-border-source: url(i/circles-filled.svg);}
 </style>
 </head>
 <body>

@@ -7,8 +7,9 @@
 body {display: flex; justify-content: center;}
 .arena {display: grid;
 	grid-template-columns: repeat(2, 250px);
-	grid-template-rows: repeat(2, 250px);
-	grid-gap: 5em 40px;}
+	grid-template-rows: repeat(1, 250px);
+	grid-gap: 5em 40px;
+	padding-bottom: 3em;
 }
 </style>
 <style type="text/css">
@@ -40,8 +41,8 @@ ol li:nth-child(2) {
 .arena .examples {width: 540px; grid-area: 1 span 2 / 1;}
 .examples li {width: 250px;}
 .examples li:nth-child(2) {left: auto; right: 0%;}
-.hard-light {grid-area: 2/1;}
-.soft-light {grid-area: 2/2;}
+.hard-light {grid-area: 1/3;}
+.soft-light {grid-area: 1/4;}
 .hard-light li:first-child {mix-blend-mode: hard-light;}
 .soft-light li:nth-child(1) {mix-blend-mode: soft-light;}
 </style>
@@ -51,8 +52,8 @@ ol li:nth-child(2) {
 <div class="arena">
 
 <ol class="examples">
-<li><em>Source</em></li>
-<li><em>Destination</em></li>
+<li><em>foreground</em></li>
+<li><em>background</em></li>
 </ol>
 
 <ol class="hard-light">

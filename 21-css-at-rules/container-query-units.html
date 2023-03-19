@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Figure</title>
+<style type="text/css">
+body {display: flex; max-width: max-content; gap: 3em; padding: 1em; font: 1em Calibri, sans-serif;}
+div.card {border: 1px solid #0004; box-shadow: 0.125em 0.125em 0.33em #0006; padding: 1em; margin-block-end: 2em;}
+div.card ul {list-style: none; margin: 0; padding: 0;}
+div.card:nth-of-type(1) {width: 15em;}
+div.card:nth-of-type(2) {width: 21em;}
+div.card > ul > li {align-self: baseline;}
+div.card > ul > li:nth-child(1) {font-size: smaller;}
+div.card > ul > li:nth-child(2) {font-weight: bold;}
+div.card > ul > li:nth-child(3) {font-style: italic;}
+div.card > ul > li:nth-child(4) {margin-block: 1em;}
+
+div.card {
+	container: card / inline-size;
+}
+
+@container card (width > 20em) {
+	div.card > ul {
+		display: grid;
+		grid-template-columns: repeat(3,30cqw);
+		justify-content: space-between;
+	}
+	div.card > ul > li:nth-child(2) {
+		text-align: center;
+	}
+	div.card > ul > li:nth-child(3) {
+		text-align: end;
+	}
+	div.card > ul li:nth-child(4) {
+		grid-column: 1 / -1;
+	}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<ul>
+<li>SKU00001</li>
+<li>Item name</li>
+<li>$Pri.ce</li>
+<li>A short description of the item that entices the user to find out more, even below 20em of container width.</li>
+</ul>
+</div>
+
+
+<div class="card">
+<ul>
+<li>SKU00001</li>
+<li>Item name</li>
+<li>$Pri.ce</li>
+<li>A short description of the item that entices the user to find out more, even above 20em of container width.</li>
+</ul>
+</div>
+
+
+</body>
+</html>
