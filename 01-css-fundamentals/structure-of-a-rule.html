@@ -10,22 +10,23 @@ body {
 }
 div {
 	display: grid;
-	grid-template-columns: 4em 8.5em 12.5em;
+	grid-template-columns: 8ch 14ch 22.5ch;
 	grid-template-rows: repeat(2,min-content);
 }
-.code {
+.labels, .code {
 	font: 2em Consolas, monospace;
 }
-.labels {
-	font: italic 2em sans-serif;
+.labels span {
+	font-style: italic;
+	font-family: sans-serif;
 }
 .labels > span {
 	font-size: 0.5em;
 	text-align: center;
 }
 .code > span {
-	padding: 0.75em;
-	padding-block-end: 0.6em;
+	padding: 1ch;
+	padding-block-end: 0.75ch;
 	border: 1px solid;
 	box-shadow: 0.33em 0.33em 0.33em #0008;
 	background-color: #EEE;
@@ -34,8 +35,8 @@ div {
 	justify-self: start;
 }
 .declaration {
-	padding: 0.25em;
-	padding-block-end: 0.125em;
+	padding: 0.25ch;
+	padding-block: 0.375ch 0.125ch;
 	border: 1px solid;
 	background-color: #FFF;
 }
@@ -50,28 +51,28 @@ div {
 	color: #117;
 }
 .above span {
-	padding-block-end: 3em;
-	margin-block-end: -1.25em;
+	padding-block-end: 4ch;
+	margin-block-end: -1.75ch;
 	background-position: 50% 100%;
 }
 .above span:nth-child(1) {
 	grid-row: 1 / -1;
 	align-self: end;
-	margin-inline-end: 2.5em;
+	margin-inline-end: 6.5ch;
 	margin-block-end: 0;
-	padding-block-end: 1.75em;
+	padding-block-end: 2.25ch;
 }
 .above span:nth-child(2) {
 	grid-column: span 2;
-	margin-block-end: -2.75em;
-	padding-block-end: 3em;
+	margin-block-end: -4ch;
+	padding-block-end: 4ch;
 	color: #AAA;
 }
 .above span:nth-child(3) {
-	margin-inline-start: 2em;
+	margin-inline-start: 2ch;
 }
 .above span:nth-child(4) {
-	margin-inline-end: 2em;
+	margin-inline-end: 2ch;
 }
 
 .below > span {
@@ -79,16 +80,14 @@ div {
 	background-image: none;
 }
 .below > span:nth-of-type(1) {
-	grid-template-columns: 6fr 4fr;
-	margin-inline: 2em;
+	grid-template-columns: 19ch 5ch;
 }
 .below > span:nth-of-type(2) {
-	grid-template-columns: 11fr 7fr;
-	margin-inline: 0 4em;
+	grid-template-columns: 24ch 15ch;
 }
 .below > span > span {
-	padding-block-start: 3.75em;
-	margin-block-start: -1.5em;
+	padding-block-start: 5ch;
+	margin-block-start: -1.5ch;
 	background-position: 50% 0%;
 
 }
