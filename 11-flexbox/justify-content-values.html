@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="c/examples.css"/>
 <style contenteditable>
 html {
-	font-size: 2vmin;
+	font-size: 1.33vmin;
 }
 body {
 	display: grid;
@@ -14,7 +14,14 @@ body {
 	text-align: center;
 	padding: 0.5rem;
 	margin: 0;
-} 
+}
+
+@media (max-width: 850px) {
+	body {
+		display: block;
+	}
+}
+
 div, div > p {
 	background-color: rgba(0,0,0,0.1);
 }
