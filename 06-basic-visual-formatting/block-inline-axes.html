@@ -5,10 +5,10 @@
 <title>The block and inline axis directions for three common writing modes</title>
 <link rel="stylesheet" type="text/css" href="c/basic.css">
 <style type="text/css">
-body {font: italic 1em Helvetica, sans-serif; display: flex; align-items: start;}
+body {font: italic 1.33em Helvetica, sans-serif; display: flex; align-items: start;}
 section {max-width: 30%; margin: 1em; padding-block: 3em; padding-inline: 3em; border: 1px solid; position: relative;}
 section.brtl {writing-mode: vertical-rl;}
-section p {padding: 0.5em; border: 1px solid; opacity: 0.6; margin-block: 1.5em; white-space: pre-wrap;}
+section p {padding: 0.5em; border: 1px solid; opacity: 0.6; margin-block: 1em; white-space: pre-wrap;}
 section::before, section::after { writing-mode: horizontal-tb;
 	position: absolute;
 	display: block;
@@ -16,11 +16,11 @@ section::before, section::after { writing-mode: horizontal-tb;
 	padding-inline: 1em 0;
 	font-weight: bold;
 	font-style: normal;
-	font-size: 1.33em;
+	font-size: 1.25em;
 	padding-inline-end: 2em;
 	}
 section::before {content: "block axis"; writing-mode: vertical-rl;
-	top: 0; bottom: 0; left: calc(50% - 1.75em);
+	top: 0; bottom: 0; left: calc(50% - .25em);
 	z-index: 1;
 	background:
 		url(i/arrowhead-down.svg) 50% 100% / 100% auto no-repeat,
@@ -60,8 +60,6 @@ section p + p {font-style: normal;}
 <p>Top-to-bottom          left-to-right text</p>
 <p><i>Examples:</i> English, Français, 
 
-
-
 Deutsch, Español, украї́нська</p>
 
 </section>
@@ -70,7 +68,6 @@ Deutsch, Español, украї́нська</p>
 
 <p>Top-to-bottom          right-to-left text</p>
 <p><i>Examples:</i> اَلْعَرَبِيَّةُ, עִבְרִית
-
 
 
 پښتو, सिंधी,  اُردُو</p>

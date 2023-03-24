@@ -5,7 +5,7 @@ svg {background: #EEE;
 	stroke: #000; stroke-width: 0.1; fill: none;}
 #timelines {stroke-width: 0.05;}
 #progressbars {stroke: none; fill: hsla(240deg,50%,50%,0.1);}
-#labels {stroke: none; fill: #000C; font: 5px Calibri;}
+#labels {stroke: none; fill: #000C; font: 7px Calibri;}
 </style>
 </defs>
 
@@ -23,8 +23,8 @@ svg {background: #EEE;
 	<rect x="10" y="50" width="50" height="10" />
 </g>
 <g id="labels">
-	<text x="35" y="66" text-anchor="middle">Time</text>
-	<text x="6" y="35" text-anchor="middle" class="vertical" transform="rotate(-90,6,35)">Progress</text>
+	<text x="35" y="67" text-anchor="middle">Time</text>
+	<text x="6" y="36" text-anchor="middle" class="vertical" transform="rotate(-90,6,35)">Progress</text>
 </g>
 
 </svg>
