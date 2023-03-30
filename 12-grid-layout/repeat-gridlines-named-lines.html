@@ -6,7 +6,7 @@
 <title>Repeated columns with named grid lines</title>
 <link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
 <style type="text/css">
-body {width: 900px; padding: 8em 2em 2em;}
+body {width: 900px; padding: 9em 2em 2em;}
 section {position: relative; width: auto;}
 
 .grid {display: grid; width: 790px; grid-template-rows: 7em; grid-template-columns: repeat(3, 10px [col-start] 250px [col-end]) 10px;}
@@ -22,7 +22,7 @@ section {position: relative; width: auto;}
 .labels#col li {display: flex; justify-content: end; align-items: start; flex-flow: column;}
 .labels#row li {display: flex; justify-content: end; align-items: start; flex-flow: row;}
 
-.labels li.line.label i {color: rebeccapurple; font: 1em Arvo, sans-serif;}
+.labels li.line.label i {color: rebeccapurple; font: 1.25em Arvo, sans-serif; white-space: nowrap;}
 .labels#col li.line.label i {border-left: 1px solid; padding-left: 0.25em;}
 .labels#row li.line.label i {border-top: 1px solid; padding-top: 0.25em;}
 

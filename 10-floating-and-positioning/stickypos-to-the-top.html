@@ -5,8 +5,8 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Sticking to the top of the sticky-positioning rectangle</title>
 <style type="text/css">
-body {font: medium sans-serif; display: flex; padding: 1em;}
-.scrollbox {border: 1px solid gray; width: 18em; height: 15em; margin: 0; 
+body {font: medium sans-serif; display: flex; padding: 1em; max-width: max-content;}
+.scrollbox {border: 1px solid gray; width: 15em; height: 15em; margin: 0; 
 	overflow: scroll;}
 .scrollbox * {font-size: inherit;}
 .scrollbox h2 {margin: 0; padding: 0.5em 0.25em 0.25em; background: rgb(77%,77%,77%);
@@ -17,7 +17,7 @@ body {font: medium sans-serif; display: flex; padding: 1em;}
 	white-space: nowrap;}
 
 .container {position: relative; margin: 0 1em;}
-.rect {position: absolute; z-index: 10; top: 2em; left: 0; height: 12.2em; width: 17.2em;
+.rect {position: absolute; z-index: 10; top: 2em; left: 0; height: 12.2em; width: 14.2em;
 	box-sizing: border-box;
 	border: 2px dashed red;}
 </style>

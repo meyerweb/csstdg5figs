@@ -6,7 +6,7 @@
 <title>Implicit grid-line names made explicit</title>
 <link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
 <style type="text/css">
-body {width: 66em; padding: 1px;}
+body {width: 67em; padding: 1px;}
 .grid {display: grid; width: 50em; margin: 7em 1em 4em 9em;
 	grid-template-areas:
 		"header  header  header  header"
@@ -37,13 +37,14 @@ grid-template-columns: repeat(4, 25%);}
 .labels .line.col.label  {grid-template-row: 1; grid-template-column: auto / span 1;}
 .labels#row li {display: flex; justify-content: start; align-items: end; flex-flow: column;}
 
-.labels li.line.label i {color: rebeccapurple; font: 1em Arvo, sans-serif;}
+.labels li.line.label i {color: rebeccapurple; font: 1.25em Arvo, sans-serif;}
 .labels#col li.line.label i {border-left: 1px solid; padding-left: 0.25em;}
 .labels#row li.line.label i:first-child {border-top: 1px solid; padding-top: 0.25em;}
 
 .labels#row li i {padding-right: 0.5em;}
 .labels#col li i:last-child {padding-bottom: 0.5em;}
 .labels#col li.high i:last-child {padding-bottom: 4em;}
+.grid.small [class^="box"] {font-size: 1.5em; border-width: 2px;}
 
 </style>
 </head>

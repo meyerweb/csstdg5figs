@@ -2,30 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Clipping due to mismatched clip and origin values</title>
+<title>Figure 21</title>
 <style type="text/css">
-body {margin: 10px;}
+html {background: #CCC;}
+body {display: flex; font-size: 20px; padding-top: 5em; gap: 1em; max-width: max-content; background: #FFF;}
 
-div {float: left; height: 110px; width: 110px; margin: 15px; padding: 1em; border: 1px dotted red;
-	background-image: url(i/yinyang-sm.png);
+div {height: 10em; width: 10em; padding: 1em; border: 1px dotted red;
+	background-image: url(i/yinyang.png);
+	background-size: 42px;
 	background-origin: padding-box;
+	position: relative;
 }
-div:nth-child(2n+1) {clear: left;}
-
+div code {position: absolute; width: 100%; left: 0; top: -5em; text-align: center; font: 1em Consolas, monospace;}
 .round {background-repeat: round;}
 .space {background-repeat: space;}
 .clipc {background-clip: content-box;}
 .clipp {background-clip: padding-box;}
 .clipb {background-clip: border-box;}
-
 </style>
 </head>
 <body>
 
-<div id="ex01" class="round clipc"></div>
-<div id="ex02" class="round clipp"></div>
-<div id="ex04" class="space clipc"></div>
-<div id="ex05" class="space clipp"></div>
+<div class="round clipp"><code>background-repeat: round<br>background-clip: padding-box</code></div>
+<div class="round clipc"><code>background-repeat: round<br>background-clip: content-box</code></div>
+<div class="space clipp"><b><code>background-repeat: space<br>background-clip: padding-box</code></div>
+<div class="space clipc"><b><code>background-repeat: space<br>background-clip: content-box</code></div>
 
 </body>
 </html>

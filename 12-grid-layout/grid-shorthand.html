@@ -6,8 +6,8 @@
 <title>Creating a grid with the grid shorthand</title>
 <link rel="stylesheet" type="text/css" href="c/grid-baseline.css">
 <style type="text/css">
-body {width: 66em; padding: 1px;}
-.grid {display: grid; width: 50em; height: 17em; margin: 9em 1em 4em 9em;
+body {width: 67em; padding: 1px;}
+.grid {display: grid; width: 50em; height: 17em; margin: 10em 1em 4em 9em;
 	grid:
 		"header header header header" 4em
 		[main-start] ". content sidebar ." 1fr [main-stop]
@@ -21,8 +21,8 @@ body {width: 66em; padding: 1px;}
 .labels#col {display: grid; grid-template-rows: 9em; grid-template-columns: 2em 3fr minmax(10em,1fr) 2em 0; width: 50em;}
 .labels#row {display: grid; grid-template-rows: 4em 1fr 6em 0; grid-template-columns: 9em; height: 17em;}
 
-.labels#col {position: absolute; top: 0; left: 9em; margin: 0; padding: 1px;}
-.labels#row {position: absolute; top: 9em; left: 0; margin: 0; padding: 1px;}
+.labels#col {position: absolute; top: 1em; left: 9em; margin: 0; padding: 1px;}
+.labels#row {position: absolute; top: 10em; left: 0; margin: 0; padding: 1px;}
 
 .labels#col li {display: flex; justify-content: end; align-items: start; flex-flow: column;}
 .labels#row li {display: flex; justify-content: end; align-items: start; flex-flow: row;}
@@ -36,13 +36,14 @@ body {width: 66em; padding: 1px;}
 .labels .line.col.label  {grid-template-row: 1; grid-template-column: auto / span 1;}
 .labels#row li {display: flex; justify-content: start; align-items: end; flex-flow: column;}
 
-.labels li.line.label i {color: rebeccapurple; font: 1em Arvo, sans-serif;}
+.labels li.line.label i {color: rebeccapurple; font: 1.25em Arvo, sans-serif; white-space: nowrap;}
 .labels#col li.line.label i {border-left: 1px solid; padding-left: 0.25em;}
 .labels#row li.line.label i:first-child {border-top: 1px solid; padding-top: 0.25em;}
 
 .labels#row li i {padding-right: 0.5em;}
 .labels#col li i:last-child {padding-bottom: 0.5em;}
 .labels#col li.high i:last-child {padding-bottom: 4em;}
+.grid.small [class^="box"] {font-size: 1.5em; border-width: 2px;}
 
 </style>
 </head>
