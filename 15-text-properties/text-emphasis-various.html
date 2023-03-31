@@ -5,13 +5,15 @@
 <title>Various emphasis marks</title>
 <link rel="stylesheet" type="text/css" href="ch06.css">
 <style type="text/css">
-body {width: 92em; font-size: 2rem;}
+body {width: 80em; font-size: 1rem;}
 table {border-collapse: collapse; border-spacing: 0;}
-th, td {border: 1px solid; border-width: 0 1px 1px 0;}
-th {padding: 0.5em 1em; font: bold 1em Consolas, monospace;}
+th, td {border: 1px solid; border-width: 0 2px 2px 0;}
+th {padding: 0.5em; font: bold 1.5em Consolas, monospace;}
 tbody td div {display: flex; justify-content: space-between;}
-td p {font-size: 1.5em; margin: 0.25em; padding: 0.25em; width: 45%; box-sizing: border-box;}
+td p {font-size: 1.5em; margin: 0.25em; padding: 0.25em; width: 50%; box-sizing: border-box;}
 td p.v {writing-mode: vertical-rl; max-height: 5em; border-left: 1px dashed gray;}
+thead th {vertical-align: bottom; padding-block-start: 0;}
+tbody th {padding-inline-start: 0;}
 
 tbody tr.filled td:nth-of-type(1) span {-webkit-text-emphasis-style: sesame; text-emphasis-style: sesame;}
 tbody tr.filled td:nth-of-type(2) span {-webkit-text-emphasis-style: dot; text-emphasis-style: dot;}

@@ -5,36 +5,45 @@
 <title>Altering word breaking behavior</title>
 <link rel="stylesheet" type="text/css" href="ch06.css">
 <style type="text/css">
-p {border: 1px dotted orange;}
+body {width: 47.5em;}
 
-div {float: left; width: 12em; margin-right: 3em;}
-.d01 {word-break: normal;}
-.d02 {word-break: break-all;}
-.d03 {word-break: keep-all;}
+table {border-collapse: separate; border-spacing: 3.5em 0; margin-inline-start: -3.5em;}
+tbody tr:nth-of-type(2) p {direction: rtl;}
+tbody td:nth-of-type(1) p {word-break: normal;}
+tbody td:nth-of-type(2) p {word-break: break-all;}
+tbody td:nth-of-type(3) p {word-break: keep-all;}
+td {vertical-align: top;}
 
-.cl02 {direction: rtl;}
-
+thead code {font: bold 1.33em Consolas, monospace;}
+p {border: 2px dashed orange; margin-block: 0.5em 1em; width: 11em;}
 </style>
 </head>
 <body>
 
-<div class="d01">
-<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
-<p class="cl02">هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p>
-<p class="cl03">これは、左から右に流れる漠然と日本語テキストの長い文字列です。</p>
-</div>
-
-<div class="d02">
-<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
-<p class="cl02">هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p>
-<p class="cl03">これは、左から右に流れる漠然と日本語テキストの長い文字列です。</p>
-</div>
-
-<div class="d03">
-<p class="cl01">Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p>
-<p class="cl02">هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p>
-<p class="cl03">これは、左から右に流れる漠然と日本語テキストの長い文字列です。</p>
-</div>
+<table>
+<thead>
+<tr>
+<th><code>normal</code></th>
+<th><code>break-all</code></th>
+<th><code>keep-all</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p></td>
+<td><p>Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p></td>
+<td><p>Supercalifragilisticexpialidociously awesome antidisestablishmentarianism.</p></td>
+</tr>
+<tr>
+<td><p>هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p></td>
+<td><p>هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p></td>
+<td><p>هذا هو سلسلة طويلة غامضة من النص العربي، الذي يتدفق من اليمين إلى اليسار.</p></td>
+</tr>
+<tr>
+<td><p>これは左から右に流れる漠然と日本語テキストの長い文字列です。</p></td>
+<td><p>これは左から右に流れる漠然と日本語テキストの長い文字列です。</p></td>
+<td><p>これは左から右に流れる漠然と日本語テキストの長い文字列です。</p></td>
+</tr>
 
 </body>
 </html>
