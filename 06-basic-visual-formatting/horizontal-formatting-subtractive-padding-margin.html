@@ -5,17 +5,17 @@
 <title>Subtractive padding</title>
 <link rel="stylesheet" type="text/css" href="base.css">
 <style type="text/css">
-header {width: 260px; border: 1px solid gray; border-bottom: 0; margin-bottom: 2px; text-align: center; height: 10px;}
+header {width: 240px; border: 1px solid gray; border-bottom: 0; margin-bottom: 2px; text-align: center; height: 10px;}
 header b {font: italic 0.9em sans-serif; background: white; padding: 0 0.33em; line-height: 1px; vertical-align: top;}
-div {float: left; border: 1px dotted gray;}
+div {max-width: max-content; border: 1px dotted gray;}
 p {background: #DDD;}
 </style>
 </head>
 <body>
 
-<header><b>260px</b></header>
+<header><b>240px</b></header>
 <div>
-<p style="width: 200px; padding: 10px; margin: 20px;">wideness?</p>
+<p style="width: 200px; padding: 10px; margin: 20px; box-sizing: border-box;">wideness?</p>
 </div>
 
 </body>
