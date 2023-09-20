@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Precise alignment details</title>
+<link rel="stylesheet" type="text/css" href="ch06.css">
+<style type="text/css">
+html {font-size: 1em;}
+body {width: max-content;}
+div {display: grid;
+	grid-template-rows: [figt] 0.5em [imgt] 0.38em 0.5em [em-half] 0.25em [em-quart] 0.25em [baseline] auto;
+	grid-template-columns: [figl] max-content [arrows] 0.67em [lines] 1em [baseline-start midpoint-start] 1.1em [baseline-end] 2.15em [midpoint-end] auto;
+	font-size: 5em;}
+p {margin: 0;
+	grid-column: lines / -1;
+	grid-row: imgt / -1;}
+img.mid {vertical-align: middle; height: 2.3em;}
+
+b {
+	filter: 
+		drop-shadow(0 0 1px #FFF) 
+		drop-shadow(0 0 1px #FFF) 
+		drop-shadow(0 0 1px #FFF) 
+		;}
+
+b.line {grid-column: lines / -1; height: 1px; margin-block: -1px 0; background: red;}
+b.line.baseline {grid-row: baseline;}
+b.line.em-half  {grid-row: em-half;}
+b.line.em-quart {grid-row: em-quart; height: 2px; margin-block: -1px;}
+
+b.arrow {height: 2px; width: 1em; background: black; position: relative; transform-origin: 0 50%;}
+b.arrow::after {content: "⏵︎"; font-size: 30px; position: absolute; right: -3px; top: -14px;}
+b.arrow.midpoint {grid-row: em-half; grid-column: 5; place-self: end end; width: 100%; margin-block: 0 2px; transform-origin: 100% 50%; rotate: 33deg;}
+b.arrow.baseline {grid-row: baseline; grid-column: 5; width: 0.67em; margin-block: 2px 0; margin-inline: -0.67em 0; transform-origin: 100% 50%; rotate: -45deg;}
+b.arrow.em-half  {grid-row: 3; grid-column: arrows; margin-block: 0.25em 0; width: 0.65em; rotate: 19deg;}
+b.arrow.em-quart {grid-row: em-quart; grid-column: arrows; margin-block: 0.25em 0; width: 0.65em; rotate: -21deg;}
+
+span.label {font: italic 1.5rem Open Sans, sans-serif; margin-inline: 0 0.125em;}
+span.label.midpoint {grid-row: figt; grid-column: 4 / span 3;}
+span.label.baseline {grid-row: baseline; grid-column: 4 / span 2; align-self: end;}
+span.label.em-half {grid-row: 3 / span 2; grid-column: 1;}
+span.label.em-quart {grid-row: em-quart / span 2; grid-column: 1;}
+</style>
+</head>
+<body>
+
+<div>
+<p>contains a <img src="i/tall.gif" class="mid" alt="tall" /> tall image</p>
+<b class="line baseline"></b>
+<b class="line em-quart"></b>
+<b class="line em-half"></b>
+<b class="arrow midpoint"></b>
+<b class="arrow baseline"></b>
+<b class="arrow em-quart"></b>
+<b class="arrow em-half"></b>
+<span class="label midpoint">Image’s midpoint</span>
+<span class="label baseline">Baseline</span>
+<span class="label em-quart">¼ em, ½ ex</span>
+<span class="label em-half">½ em, 1 ex</span>
+</div>
+
+</body>
+</html>

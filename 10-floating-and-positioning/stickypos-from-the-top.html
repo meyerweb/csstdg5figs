@@ -6,20 +6,21 @@
 <title>Detaching from the top of the sticky-positioning rectangle</title>
 <style type="text/css">
 body {font: medium sans-serif; display: flex; padding: 1em; max-width: max-content;}
-.scrollbox {border: 1px solid gray; width: 15em; height: 15em; margin: 0; 
+.scrollbox {border: 1px solid gray; width: 13em; height: 15em; margin: 0; 
 	overflow: scroll;}
 .scrollbox * {font-size: inherit;}
 .scrollbox h2 {margin: 0; padding: 0.5em 0.25em 0.25em; background: rgb(77%,77%,77%);
-	position: sticky; top: 2em;}
+	position: sticky; top: 2rem; font-size: 1.3em;}
+.scrollbox h2 + p::first-line {font-style: italic;}
 .scrollbox ol {list-style: none; margin: 0; padding: 0;}
 .scrollbox ol li {border: 1px solid #DDD; border-width: 1px 0;
 	padding: 0.4em 0.25em 0.3em; margin-bottom: -1px;
 	white-space: nowrap;}
-
 .container {position: relative; margin: 0 1em;}
-.rect {position: absolute; z-index: 10; top: 2em; left: 0; height: 12.2em; width: 14.2em;
+.rect {position: absolute; z-index: 10; top: 2rem; left: 0; height: 12.2em; width: 12.5em;
 	box-sizing: border-box;
 	border: 2px dashed red;}
+
 </style>
 </head>
 <body>
